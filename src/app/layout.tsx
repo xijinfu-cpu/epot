@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/custom/footer";
 import Header from "@/components/custom/header";
+import ChatBot from "@/components/custom/chatbot";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,23 +23,23 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Sharang Tech Labs",
-  description: "Sharang is a full-stack software and AI lab. We build intelligent products for startups, mission-driven teams, and our own experiments.",
-  applicationName: "Sharang Tech Labs",
+  title: "Effortless",
+  description: "Effortless is a full-stack software and AI lab. We build intelligent products for startups, mission-driven teams, and our own experiments.",
+  applicationName: "Effortless",
   keywords: ["NGO", "women empowerment", "agriculture development", "child welfare", "elderly care", "education", "India foundation"],
-  authors: [{ name: "Sharang Tech Labs" }],
+  authors: [{ name: "Effortless" }],
   viewport: "width=device-width, initial-scale=1",
   openGraph: {
-    title: "Sharang Tech Labs",
-    description: "Sharang is a full-stack software and AI lab. We build intelligent products for startups, mission-driven teams, and our own experiments.",
+    title: "Effortless",
+    description: "Effortless is a full-stack software and AI lab. We build intelligent products for startups, mission-driven teams, and our own experiments.",
     url: "https://sharang.tech",
-    siteName: "Sharang Tech Labs",
+    siteName: "Effortless",
     images: [
       {
         url: "https://sharang.tech/og.png",
         width: 800,
         height: 600,
-        alt: "Sharang Tech Labs Logo",
+        alt: "Effortless Logo",
       },
     ],
     locale: 'en_IN',
@@ -46,15 +47,17 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sharang Tech Labs',
-    description: 'Sharang is a full-stack software and AI lab. We build intelligent products for startups, mission-driven teams, and our own experiments.',
+    title: 'Effortless',
+    description: 'Effortless is a full-stack software and AI lab. We build intelligent products for startups, mission-driven teams, and our own experiments.',
     creator: '@sharanghq',
     images: ['https://sharang.tech/og.png'],
   },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
+    icon: [
+      { url: '/brand-logo.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/brand-logo.svg',
+    apple: '/brand-logo.svg',
   },
 };
 
@@ -73,11 +76,11 @@ export default function RootLayout({
     {
       "@context": "https://schema.org", 
       "@type": "Nonprofit501c3",
-      "name": "Sharang Tech Labs",
-      "alternateName": "Sharang",
+      "name": "Effortless",
+      "alternateName": "Effortless",
       "url": "https://sharang.tech", 
-      "logo": "https://sharang.tech/logo.png", 
-      "description": "Sharang is a full-stack software and AI lab. We build intelligent products for startups, mission-driven teams, and our own experiments.",
+      "logo": "https://sharang.tech/brand-logo.png", 
+      "description": "Effortless is a full-stack software and AI lab. We build intelligent products for startups, mission-driven teams, and our own experiments.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "808, 8th floor, Mahabir",
@@ -158,8 +161,10 @@ export default function RootLayout({
         <main className="w-full">
           {children}
           <Footer />
+          <ChatBot />
         </main>
       </body>
     </html>
   );
 }
+

@@ -8,37 +8,37 @@ interface ClientsProps {
 
 const Clients: FunctionComponent<ClientsProps> = ({ className }) => {
     const clients = [{
-        logo: '/unoversion.png',
+        logo: '/logo-placeholder.png',
         w: 64,
         h: 64,
     }, {
-        logo: '/kartikey-full.png',
+        logo: '/logo-placeholder.png',
         cls: 'invert-0',
         w: 128,
         h: 64,
         className: "max-md:border-r-0"
     }, {
-        logo: '/hyperwafer.png',
+        logo: '/logo-placeholder.png',
         w: 64,
         h: 64,
     }, {
-        logo: '/dyu.png',
+        logo: '/logo-placeholder.png',
         w: 64,
         h: 64,
         className: 'border-r-0'
     }, {
-        logo: '/scihawk.png',
+        logo: '/logo-placeholder.png',
         w: 64,
         h: 64,
         className: 'md:border-b-0'
     }, {
-        logo: '/mahalik-foundation.png',
+        logo: '/logo-placeholder.png',
         cls: 'invert-0',
         w: 128,
         h: 64,
         className: 'md:border-b-0 max-md:border-r-0'
     }, {
-        logo: '/bharatsaga.png',
+        logo: '/logo-placeholder.png',
         cls: 'invert-0',
         w: 64,
         h: 64,
@@ -54,7 +54,7 @@ const Clients: FunctionComponent<ClientsProps> = ({ className }) => {
                         </div>)
                     }
                     <div className={cn("h-32 relative flex items-center justify-center opacity-40")}>
-                        and more...
+                        dan lainnya...
                     </div>
                 </div>
             </div>

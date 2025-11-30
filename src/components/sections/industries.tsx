@@ -9,41 +9,41 @@ const Industries: FunctionComponent<IndustriesProps> = ({ className }) => {
     const industries = [{
         title: "eCommerce",
         link: "/solution/ecommerce",
-        image: "/shopping-cart.png",
+        image: "/industries-ecommerce.png",
         className: 'md:col-span-2'
     }, {
-        title: "Software as a Service",
+        title: "Company Profile",
         link: "/solution/saas",
-        image: '/saas.png',
+        image: '/industries-company-profile.png',
         invert: true,
         className: 'md:justify-start'
     }, {
-        title: "Data",
+        title: "Clinic",
         link: "/solution/data",
-        image: '/data.png',
+        image: '/industries-clinic.png',
         className: 'md:justify-start'
     }, {
-        title: "Cybersecurity",
+        title: "Education",
         link: "/solution/cybersecurity",
-        image: '/cybersecurity.png',
+        image: '/industries-education.png',
     }, {
-        title: "Internet of Things",
+        title: "Media",
         link: "/solution/iot",
-        image: '/iot.png',
+        image: '/industries-media.jpg',
         className: 'md:justify-start md:items-end'
     }, {
-        title: "Artificial Intelligence",
+        title: "AI",
         link: "/solution/ai",
-        image: '/ai.png',
+        image: '/industries-ai.png',
         invert: true,
         className: 'md:col-span-2'
     },]
     return (<>
         <section className={cn("w-full py-20", className)}>
             <div className="max-w-5xl mx-5 md:mx-auto font-medium">
-                <span className="border text-sm py-1 px-3 border-neutral-300 rounded-2xl">Industries</span>
+                <span className="border text-sm py-1 px-3 border-neutral-300 rounded-2xl">Industri</span>
                 <h1 className="md:text-4xl md:leading-12 text-2xl my-2">
-                    Segments We Serve, <br /><span className="text-neutral-400">For Brands who move fast — and Think Ahead</span>
+                    Segmen yang Kami Layani, <br /><span className="text-neutral-400">Untuk Brand yang Bergerak Cepat — dan Berpikir ke Depan</span>
                 </h1>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-5 mt-10 max-w-6xl mx-5 md:mx-auto">
@@ -67,3 +67,4 @@ const Industries: FunctionComponent<IndustriesProps> = ({ className }) => {
 }
 
 export default Industries;
+

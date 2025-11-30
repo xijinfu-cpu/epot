@@ -107,3 +107,4 @@ export default function Iphone15Pro({
     </svg>
   );
 }
+

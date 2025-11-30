@@ -13,52 +13,51 @@ interface HeroProps {
 const Hero: FunctionComponent<HeroProps> = ({ className }) => {
     const services = [{
         name: 'Branding',
-        tagline: 'Build a Strong Identity',
+        tagline: 'Bangun Identitas yang Kuat',
         href: '/services/#branding',
-        image: '/branding.png',
-        imgClassName: 'scale-120 group-hover:scale-150 duration-500'
+        image: '/services-branding.png',
+        imgClassName: 'object-cover'
     }, {
-        name: 'Designing',
-        tagline: 'Design That Works',
+        name: 'Desain',
+        tagline: 'Desain yang Berfungsi',
         href: '/services/#designing',
-        image: '/designing.png',
-        imgClassName: 'scale-80 group-hover:scale-125 duration-500'
+        image: '/services-design.png',
+        imgClassName: 'object-cover'
     }, {
-        name: 'Development',
-        tagline: 'Code That Scales',
+        name: 'Pengembangan',
+        tagline: 'Kode yang Terukur',
         href: '/services/#development',
-        image: '/development.png',
-        imgClassName: 'mt-30 group-hover:scale-150 duration-500'
+        image: '/services-development.png',
+        imgClassName: 'object-cover'
     }, {
         name: 'Audit',
-        tagline: 'Audit & Improvise',
+        tagline: 'Audit & Improvisasi',
         href: '/services/#audit',
-        image: '/auditing.png',
-        imgClassName: 'mt-40 group-hover:scale-150 duration-500'
+        image: '/services-audit.png',
+        imgClassName: 'object-cover'
     }]
     return (<>
-        <section className={cn("w-full relative bg-no-repeat bg-contain md:bg-[url(/forest.png)]", className)}>
+        <section className={cn("w-full relative bg-no-repeat bg-contain md:bg-[url(/services-hero-forest.png)]", className)}>
             <div className="py-40 max-sm:px-5" style={{ background: 'linear-gradient(343deg,rgba(245, 245, 245, 1) 70%, rgba(0, 0, 0, 0) 100%)' }}>
                 <div className="text-center pb-25 font-medium relative">
-                    <span className="border text-sm py-1 px-3 border-neutral-300 rounded-2xl">All the Layers</span>
+                    <span className="border text-sm py-1 px-3 border-neutral-300 rounded-2xl">Semua Lapisan</span>
                     <h1 className="text-xl md:text-4xl md:leading-12 my-2">
-                        Services that ship <TextLoop>
-                            <span>complex stuffs</span>
-                            <span>web apps</span>
-                            <span>mobile apps</span>
-                            <span>AI models</span>
-                            <span>websites</span>
-                        </TextLoop>, <br /><span className="text-neutral-400">No fluff. Just what moves the needle.</span>
+                        Layanan yang mengirimkan <TextLoop>
+                            <span>hal kompleks</span>
+                            <span>aplikasi web</span>
+                            <span>aplikasi mobile</span>
+                            <span>model AI</span>
+                            <span>website</span>
+                        </TextLoop>, <br /><span className="text-neutral-400">Tanpa basa-basi. Hanya yang menggerakkan jarum.</span>
                     </h1>
                     <p className="font-normal md:text-xl mt-5 text-neutral-600 relative max-w-2xl mx-auto">
-                        Whether you need a brand identity, a scalable app, or a code review, we deliver with precision, speed, and clarity — no gaps, no misalignment.
+                        Baik Anda memerlukan identitas brand, aplikasi yang terukur, atau code review, kami menghadirkan dengan presisi, kecepatan, dan kejelasan — tanpa celah, tanpa misalignment.
                     </p>
                 </div>
-                <div className="grid font-medium grid-cols-1 md:grid-cols-4 max-w-fit mx-auto gap-5 relative">
-                    <Image src={"/pot-plant.png"} width={160} height={160} alt="pot-plant" className="absolute z-0 md:opacity-100 opacity-5 -top-54 right-30" />
-                    {services.map((item, i) => <Card arrowDirDown key={i} title={item.name} sub={item.tagline} link={item.href} className="min-h-96 w-84 md:w-96">
-                        <div className="h-80 duration-300 overflow-hidden flex items-center justify-center rounded-xl right-0 bg-background">
-                            <Image src={item.image} unoptimized width={280} height={-1} alt="tech" className={item.imgClassName} />
+                <div className="grid font-medium grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 items-stretch relative max-w-6xl w-full px-5 md:px-0 mx-auto">
+                    {services.map((item, i) => <Card arrowDirDown sm titleClassName="text-base md:text-lg" subClassName="text-sm md:text-base" key={i} title={item.name} sub={item.tagline} link={item.href} className="w-full">
+                        <div className="rounded-xl overflow-hidden bg-background relative aspect-[4/3] md:aspect-[5/3]">
+                            <Image src={item.image} fill unoptimized alt={item.name} className={cn("object-cover", item.imgClassName)} sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw" />
                         </div>
                     </Card>)}
                 </div>
@@ -68,3 +67,4 @@ const Hero: FunctionComponent<HeroProps> = ({ className }) => {
 }
 
 export default Hero;
+

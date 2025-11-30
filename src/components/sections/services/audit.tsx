@@ -8,18 +8,18 @@ interface AuditProps {
 
 const Audit: FunctionComponent<AuditProps> = ({ className }) => {
     const services = [{
-        name: 'Tech Audit',
-        sub: 'Review of code quality, security, performance, and infrastructure',
+        name: 'Audit Teknologi',
+        sub: 'Review kualitas kode, keamanan, kinerja, dan infrastruktur',
         key: 'tech',
         // link: '/service/tech-audit'
     }, {
-        name: 'UX Audit',
-        sub: 'Evaluate usability, accessibility, and user journey friction',
+        name: 'Audit UX',
+        sub: 'Evaluasi kegunaan, aksesibilitas, dan hambatan perjalanan pengguna',
         key: 'ux',
         // link: '/service/ux-audit'
     }, {
-        name: 'Cost Audit',
-        sub: 'Optimize infrastructure, tools, dev spendings and more',
+        name: 'Audit Biaya',
+        sub: 'Optimalkan infrastruktur, tools, pengeluaran dev dan lainnya',
         key: 'cost',
         // link: '/service/cost-audit'
     }]
@@ -27,16 +27,16 @@ const Audit: FunctionComponent<AuditProps> = ({ className }) => {
         <section className={cn("pt-20 md:pt-40 pb-20 max-sm:px-5", className)} id="audit">
             <div className="max-w-5xl mx-auto pb-10 font-medium relative">
                 <h1 className="text-2xl md:text-4xl md:leading-12 my-2">
-                    Audit, <br /><span className="text-neutral-400">That makes you understand, the improvements.</span>
+                    Audit, <br /><span className="text-neutral-400">Yang membuat Anda memahami, perbaikannya.</span>
                 </h1>
                 <p className="md:text-xl font-normal my-5 text-neutral-600 relative max-w-2xl">
-                    Whether you’ve inherited code, are preparing to scale, or want to optimize costs, our audits deliver actionable insights — so you can move faster, safer, and smarter.
+                    Baik Anda mewarisi kode, bersiap untuk scale, atau ingin mengoptimalkan biaya, audit kami memberikan wawasan yang dapat ditindaklanjuti — sehingga Anda dapat bergerak lebih cepat, lebih aman, dan lebih cerdas.
                 </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 font-medium w-fit mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 font-medium w-full max-w-6xl mx-auto px-5 md:px-0">
                 {
-                    services.map((service, i) => <Card key={i} sm altStyle reverse={i !== 1} title={service.name} sub={service.sub} className="min-h-96 md:w-96">
-                        <div className="h-80 w-full duration-300 flex items-center justify-center overflow-hidden rounded-xl p-5 bg-background">
+                    services.map((service, i) => <Card key={i} sm altStyle reverse={i !== 1} title={service.name} sub={service.sub} className="min-h-96 w-full">
+                        <div className="w-full duration-300 flex flex-col items-start justify-center rounded-xl p-5 bg-background min-h-64 md:min-h-72">
                             {
                                 service.key === "tech" && <>
                                     <div className="grid grid-cols-2 gap-10">
@@ -76,3 +76,4 @@ const Audit: FunctionComponent<AuditProps> = ({ className }) => {
 }
 
 export default Audit;
+

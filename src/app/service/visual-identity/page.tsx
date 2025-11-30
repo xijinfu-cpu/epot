@@ -41,15 +41,15 @@ export default function Brand_strategy() {
                 <div className="grid grid-cols-3 gap-5 mt-10">
                     <div className="h-120 duration-300 overflow-hidden rounded right-0 bg-background">
                         <video preload="metadata" autoPlay className="object-cover" controls={false} muted loop id="visual-identity-vid-1" >
-                            <source src="/vi-msg.mp4" type="video/mp4" />
+                            <source src="/design-system-messaging.mp4" type="video/mp4" />
                         </video>
                     </div>
                     <div className="h-120 duration-300 overflow-hidden rounded right-0 bg-background">
-                        <Image src={"/vi-colors.png"} width={900} height={600} className="object-cover scale-125 pt-5" alt="fashion-collage" />
+                        <Image src={"/design-system-colors.png"} width={900} height={600} className="object-cover scale-125 pt-5" alt="fashion-collage" />
                     </div>
                     <div className="h-120 duration-300 overflow-hidden rounded right-0 bg-background">
                         <video preload="metadata" autoPlay className="object-cover scale-125 pt-10" controls={false} muted loop id="visual-identity-vid-2" >
-                            <source src="/vi-identity.mp4" type="video/mp4" />
+                            <source src="/design-system-identity.mp4" type="video/mp4" />
                         </video>
                     </div>
                 </div>
@@ -128,21 +128,21 @@ export default function Brand_strategy() {
                     <div className="h-100 bg-white rounded-xl text-center flex flex-col p-5 items-center justify-center">
                         <div className="grid grid-cols-2 mt-auto w-32 h-15 mb-2 gap-2">
                             <div className="rounded-lg flex items-center justify-center bg-[var(--unoversion)]">
-                                <Image src={"/unoversion.png"} width={48} height={48} alt="unoversion" className="object-cover" />
+                                <Image src={"/case-unoversion.png"} width={48} height={48} alt="unoversion" className="object-cover" />
                             </div>
                             <div className="rounded-lg flex items-center justify-center bg-blue-600">
-                                <Image src={"/kartikey.png"} width={48} height={48} alt="kartikey" className="object-cover" />
+                                <Image src={"/case-kartikey.png"} width={48} height={48} alt="kartikey" className="object-cover" />
                             </div>
                         </div>
                         <div className="grid grid-cols-3 w-48 h-15 gap-2">
                             <div className="rounded-lg flex items-center justify-center bg-[var(--hyperwafer)]">
-                                <Image src={"/hyperwafer.png"} width={48} height={48} alt="hyperwafer" className="object-cover" />
+                                <Image src={"/case-hyperwafer.png"} width={48} height={48} alt="hyperwafer" className="object-cover" />
                             </div>
                             <div className="rounded-lg flex items-center justify-center bg-[var(--mahalik)]">
-                                <Image src={"/mahalik.png"} width={48} height={48} alt="mahalik" className="object-cover" />
+                                <Image src={"/case-mahalik.png"} width={48} height={48} alt="mahalik" className="object-cover" />
                             </div>
                             <div className="rounded-lg flex items-center justify-center bg-neutral-800">
-                                <Image src={"/scihawk.png"} width={48} height={48} alt="mahalik" className="object-cover" />
+                                <Image src={"/case-scihawk.png"} width={48} height={48} alt="mahalik" className="object-cover" />
                             </div>
                         </div>
                         <h1 className="text-xl mt-auto">
@@ -190,7 +190,7 @@ export default function Brand_strategy() {
                 </Accordion>
             </section>
             <section className="max-w-5xl mx-auto px-5 py-20 font-medium overflow-hidden relative text-center bg-white rounded-xl">
-                <Image src={"/hands.png"} width={512} height={400} alt="hands" className="absolute rotate-90 top-30 -left-30" />
+                <Image src={"/story-hands.png"} width={512} height={400} alt="hands" className="absolute rotate-90 top-30 -left-30" />
                 <div className="max-w-xl mx-auto">
                     <span className="text-blue-500 text-sm">Ready to Build Your Look?</span>
                     <h1 className="text-2xl leading-10 my-2">

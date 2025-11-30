@@ -20,8 +20,8 @@ export const generateMetadata: any = async ({ params }: { params: CaseStudyParam
     const currentStory = Stories.find((v) => v.id === Number(params.id));
     return {
         title: currentStory
-            ? `${currentStory.title} | Client Story — Sharang Tech Labs`
-            : "Client Story — Sharang Tech Labs",
+            ? `${currentStory.title} | Client Story — Effortless`
+            : "Client Story — Effortless",
     } as Metadata;
 };
 
@@ -154,7 +154,7 @@ export default async function Page({
                 </div>
             </div>
             <div className="max-w-7xl mx-auto mt-30">
-                <span className="border text-sm py-1 px-3 font-medium border-neutral-300 rounded-2xl">More stories from Sharang&apos;s Archive</span>
+                <span className="border text-sm py-1 px-3 font-medium border-neutral-300 rounded-2xl">More stories from Effortless&apos;s Archive</span>
                 <div className="grid grid-cols-3 mt-3 gap-5">
                     {
                         Stories.map((story, i) => story.id !== Number(id) && i < 4 && <Card altStyle sm className="h-fit" title={story.company} sub={story.title} link={`/case-study/${story.id}`} key={i}>

@@ -56,11 +56,11 @@ export default function Brand_strategy() {
                     Clarity before code. Positioning before pixels.<br /><span className="text-neutral-400">Build a Brand That Knows What It Stands For.</span>
                 </h1>
                 <p className="font-normal text-xl mt-5 text-neutral-600 relative max-w-xl">
-                    At Sharang, we don’t just design logos — we define your voice, vision, and value. Whether you&&apos;re pre-launch or rebranding, we help you stand out with a strategy that works, not just looks good.
+                    At Effortless, we don&apos;t just design logos — we define your voice, vision, and value. Whether you&apos;re pre-launch or rebranding, we help you stand out with a strategy that works, not just looks good.
                 </p>
                 <div className="mt-10 bg-white rounded-xl grid grid-cols-5 gap-5 p-5">
                     <div className="h-52 col-span-2 duration-300 overflow-hidden rounded-xl right-0 bg-background">
-                        <Image src={"/fashion-collage.png"} width={640} height={355} alt="fashion-collage" />
+                        <Image src={"/story-fashion-collage.png"} width={640} height={355} alt="fashion-collage" />
                     </div>
                     <div className="col-span-3 space-y-2">
                         <span className="text-blue-500 text-sm">Beyond the Logo</span>
@@ -144,21 +144,21 @@ export default function Brand_strategy() {
                     <div className="h-100 bg-white rounded-xl text-center flex flex-col p-5 items-center justify-center">
                         <div className="grid grid-cols-2 mt-auto w-32 h-15 mb-2 gap-2">
                             <div className="rounded-lg flex items-center justify-center bg-[var(--unoversion)]">
-                                <Image src={"/unoversion.png"} width={48} height={48} alt="unoversion" className="object-cover" />
+                                <Image src={"/case-unoversion.png"} width={48} height={48} alt="unoversion" className="object-cover" />
                             </div>
                             <div className="rounded-lg flex items-center justify-center bg-blue-600">
-                                <Image src={"/kartikey.png"} width={48} height={48} alt="kartikey" className="object-cover" />
+                                <Image src={"/case-kartikey.png"} width={48} height={48} alt="kartikey" className="object-cover" />
                             </div>
                         </div>
                         <div className="grid grid-cols-3 w-48 h-15 gap-2">
                             <div className="rounded-lg flex items-center justify-center bg-[var(--hyperwafer)]">
-                                <Image src={"/hyperwafer.png"} width={48} height={48} alt="hyperwafer" className="object-cover" />
+                                <Image src={"/case-hyperwafer.png"} width={48} height={48} alt="hyperwafer" className="object-cover" />
                             </div>
                             <div className="rounded-lg flex items-center justify-center bg-[var(--mahalik)]">
-                                <Image src={"/mahalik.png"} width={48} height={48} alt="mahalik" className="object-cover" />
+                                <Image src={"/case-mahalik.png"} width={48} height={48} alt="mahalik" className="object-cover" />
                             </div>
                             <div className="rounded-lg flex items-center justify-center bg-neutral-800">
-                                <Image src={"/scihawk.png"} width={48} height={48} alt="mahalik" className="object-cover" />
+                                <Image src={"/case-scihawk.png"} width={48} height={48} alt="mahalik" className="object-cover" />
                             </div>
                         </div>
                         <h1 className="text-xl mt-auto">
@@ -206,7 +206,7 @@ export default function Brand_strategy() {
                 </Accordion>
             </section>
             <section className="max-w-5xl mx-auto px-5 py-20 font-medium overflow-hidden relative text-center bg-white rounded-xl">
-                <Image src={"/hands.png"} width={512} height={400} alt="hands" className="absolute rotate-90 top-30 -left-30" />
+                <Image src={"/story-hands.png"} width={512} height={400} alt="hands" className="absolute rotate-90 top-30 -left-30" />
                 <div className="max-w-xl mx-auto">
                     <span className="text-blue-500 text-sm">Ready to Build Your Brand?</span>
                     <h1 className="text-2xl leading-10 my-2">
@@ -230,3 +230,5 @@ export default function Brand_strategy() {
         </>
     )
 }
+
+

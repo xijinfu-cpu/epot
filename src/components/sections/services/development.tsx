@@ -75,18 +75,18 @@ const Development: FunctionComponent<DevelopmentProps> = ({ className }) => {
         icon: 'logos:vercel-icon',
     },]
     const services = [{
-        name: 'Web Development',
-        sub: 'Fast, secure, and scalable apps built for real-world use',
+        name: 'Pengembangan Web',
+        sub: 'Aplikasi cepat, aman, dan terukur yang dibangun untuk penggunaan dunia nyata',
         // link: '/service/web-development',
         key: 'wd',
     }, {
-        name: 'Mobile Development',
-        sub: 'Reusable components, clear rules, and seamless developer handoff',
-        video: '/mob.mp4',
+        name: 'Pengembangan Mobile',
+        sub: 'Komponen yang dapat digunakan kembali, aturan jelas, dan serah terima developer yang mulus',
+        video: '/dev-mobile.mp4',
         // link: '/service/mobile-development'
     }, {
-        name: 'AI Development',
-        sub: 'Intelligent features that automate, assist, and predict',
+        name: 'Pengembangan AI',
+        sub: 'Fitur cerdas yang mengotomatisasi, membantu, dan memprediksi',
         key: 'ai',
         // link: '/service/wireframe'
     }]
@@ -114,24 +114,24 @@ const Development: FunctionComponent<DevelopmentProps> = ({ className }) => {
         <section className={cn("pt-20 md:pt-40 pb-20 max-sm:px-5", className)} id="development">
             <div className="max-w-5xl mx-auto pb-10 font-medium relative">
                 <h1 className="text-2xl md:text-4xl md:leading-12 my-2">
-                    Development, <br /><span className="text-neutral-400">That Scales & Built to Last.</span>
+                    Pengembangan, <br /><span className="text-neutral-400">Yang Terukur & Dibangun untuk Bertahan.</span>
                 </h1>
                 <p className="md:text-xl font-normal my-5 text-neutral-600 relative max-w-2xl">
-                    We develop robust, future-ready applications using MERN, Python, PHP, and React Native. With AI integration and DevOps support, we build systems that scale, perform, and evolve with your business.
+                    Kami mengembangkan aplikasi yang tangguh dan siap masa depan menggunakan MERN, Python, PHP, dan React Native. Dengan integrasi AI dan dukungan DevOps, kami membangun sistem yang terukur, berkinerja, dan berkembang dengan bisnis Anda.
                 </p>
-                <div className="flex absolute -top-10 md:top-30 md:-right-18 gap-5">
-                    <Icon icon={"logos:visual-studio-code"} className="size-6 md:size-12" />
-                    <Icon icon={"logos:javascript"} className="size-6 md:size-12" />
-                    <Icon icon={"logos:python"} className="size-6 md:size-12" />
-                    <Icon icon={"logos:php"} className="size-6 md:size-12" />
+                <div className="flex absolute -top-10 md:-top-6 lg:top-30 md:right-2 lg:-right-18 gap-3 md:gap-4 lg:gap-5">
+                    <Icon icon={"logos:visual-studio-code"} className="size-8 md:size-10 lg:size-12" />
+                    <Icon icon={"logos:javascript"} className="size-8 md:size-10 lg:size-12" />
+                    <Icon icon={"logos:python"} className="size-8 md:size-10 lg:size-12" />
+                    <Icon icon={"logos:php"} className="size-8 md:size-10 lg:size-12" />
                 </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 font-medium w-fit mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 font-medium w-full max-w-6xl mx-auto px-5 md:px-0">
                 {
-                    services.map((service, i) => <Card sm altStyle title={service.name} sub={service.sub} key={i} className="md:w-96">
+                    services.map((service, i) => <Card sm altStyle title={service.name} sub={service.sub} key={i} className="w-full min-h-96">
                         {
                             service.key === "wd" && <>
-                                <div className="h-64 overflow-hidden flex flex-col gap-10 justify-center bg-background rounded-xl">
+                                <div className="overflow-hidden flex flex-col gap-10 justify-center bg-background rounded-xl aspect-[4/3] md:aspect-[5/4]">
                                     <div className="grid grid-cols-2 h-full">
                                         <div className="flex max-h-64 flex-col items-center justify-center">
                                             <div className="grid grid-cols-2 gap-1">
@@ -140,7 +140,7 @@ const Development: FunctionComponent<DevelopmentProps> = ({ className }) => {
                                                 </div>)}
                                             </div>
                                             <p className="text-sm mt-2 opacity-50">
-                                                and more...
+                                                dan lainnya...
                                             </p>
                                         </div>
                                         <div>
@@ -161,7 +161,7 @@ const Development: FunctionComponent<DevelopmentProps> = ({ className }) => {
                         }
                         {
                             service.key === "ai" && <>
-                                <div className="h-64 flex flex-col gap-10 justify-center bg-background rounded-xl">
+                                <div className="flex flex-col gap-10 justify-center bg-background rounded-xl aspect-[4/3] md:aspect-[5/4]">
                                     <InfiniteSlider speed={40}>
                                         {["logos:google-gemini", "logos:openai-icon", "logos:mistral-ai-icon", "logos:stability-ai-icon", "logos:meta-icon", "logos:claude-icon", "logos:google-bard-icon"].map((item, i) => <Icon icon={item} key={i} className="size-10 ml-3" />)}
                                     </InfiniteSlider>
@@ -179,3 +179,4 @@ const Development: FunctionComponent<DevelopmentProps> = ({ className }) => {
 }
 
 export default Development;
+

@@ -22,9 +22,9 @@ export default function Home() {
         <div className="max-w-5xl p-5 rounded-xl bg-white mx-5 md:mx-auto">
           <Link href={"/contact"} className="flex group font-medium">
             <span>
-              <span className="text-sm md:pl-2">Something we can help with?</span>
+              <span className="text-sm md:pl-2">Ada yang bisa kami bantu?</span>
               <h1 className="md:text-8xl text-3xl">
-                Let&apos;s Connect
+                Mari Terhubung
               </h1>
             </span>
             <MoveRight className="ml-auto -translate-x-10 group-hover:translate-x-0 duration-300 group-hover:text-blue-600 size-10 max-md:mt-auto md:size-32" />
@@ -34,3 +34,4 @@ export default function Home() {
     </>
   );
 }
+

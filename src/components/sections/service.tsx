@@ -16,42 +16,42 @@ interface ServiceProps {
 const Service: FunctionComponent<ServiceProps> = ({ className }) => {
     const services = [{
         name: 'Branding',
-        tagline: 'Build a Strong Identity',
+        tagline: 'Bangun Identitas yang Kuat',
         href: '/services/#branding',
-        image: '/branding.png',
-        imgClassName: 'scale-120 group-hover:scale-150 duration-500'
+        image: '/services-branding.png',
+        imgClassName: 'object-cover'
     }, {
-        name: 'Designing',
-        tagline: 'Design That Works',
+        name: 'Desain',
+        tagline: 'Desain yang Berfungsi',
         href: '/services/#designing',
-        image: '/designing.png',
-        imgClassName: 'scale-80 group-hover:scale-120 duration-500'
+        image: '/services-design.png',
+        imgClassName: 'object-cover'
     }, {
-        name: 'Development',
-        tagline: 'Code That Scales',
+        name: 'Pengembangan',
+        tagline: 'Kode yang Terukur',
         href: '/services/#development',
-        image: '/development.png',
-        imgClassName: 'mt-30 group-hover:scale-150 duration-500'
+        image: '/services-development.png',
+        imgClassName: 'object-cover'
     }, {
         name: 'Audit',
-        tagline: 'Audit & Improvise',
+        tagline: 'Audit & Improvisasi',
         href: '/services/#audit',
-        image: '/auditing.png',
-        imgClassName: 'mt-40 group-hover:scale-150 duration-500'
+        image: '/services-audit.png',
+        imgClassName: 'object-cover'
     }]
     return (<>
         <section className={cn("w-full py-20", className)}>
             <div className="max-w-5xl mx-5 md:mx-auto mb-8 font-medium">
-                <span className="border text-sm py-1 px-3 border-neutral-300 rounded-2xl">Services</span>
+                <span className="border text-sm py-1 px-3 border-neutral-300 rounded-2xl">Layanan</span>
                 <h1 className="text-2xl md:text-4xl md:leading-12 my-2">
-                    We do <TextLoop>
+                    Kami melakukan <TextLoop>
                         <span>branding</span>
-                        <span>designing</span>
-                        <span>development</span>
-                        <span>auditing</span>
-                        <span>testing</span>
-                        <span>integrations</span>
-                    </TextLoop>, <br /><span className="text-neutral-400">From brand to code to audit — we cover every layer.</span>
+                        <span>desain</span>
+                        <span>pengembangan</span>
+                        <span>audit</span>
+                        <span>pengujian</span>
+                        <span>integrasi</span>
+                    </TextLoop>, <br /><span className="text-neutral-400">Dari brand hingga audit — kami menangani setiap lapisan.</span>
                 </h1>
             </div>
             <Carousel className="relative max-w-6xl font-medium mx-5 md:mx-auto">
@@ -63,8 +63,8 @@ const Service: FunctionComponent<ServiceProps> = ({ className }) => {
                 />
                 <CarouselContent className='bg-background'>
                     {services.map((item, i) => <Card title={item.name} link={item.href} sub={item.tagline} key={i} className="min-h-96 md:min-w-95 min-w-84 basis-84 md:basis-95 mr-5">
-                        <div className="h-80 duration-300 overflow-hidden flex items-center justify-center rounded-xl right-0 bg-background">
-                            <Image src={item.image} unoptimized width={280} height={-1} alt="tech" className={item.imgClassName} />
+                        <div className="h-80 rounded-xl overflow-hidden bg-background relative">
+                            <Image src={item.image} fill unoptimized alt={item.name} className={item.imgClassName} />
                         </div>
                     </Card>)}
                 </CarouselContent>
@@ -74,3 +74,4 @@ const Service: FunctionComponent<ServiceProps> = ({ className }) => {
 }
 
 export default Service;
+

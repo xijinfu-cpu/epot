@@ -15,9 +15,9 @@ const Sidebar: FunctionComponent<SidebarProps> = ({ }) => {
     const pathname = usePathname();
 
     return (<aside className="w-96 data-[open=true]:w-screen fixed top-0 left-0 z-50 p-6 h-screen" data-open={open}>
-        <div className="flex flex-col py-4 rounded-3xl px-4 bg-white h-full" style={{ backgroundImage: 'linear-gradient(to left bottom, #fff, #fff, #fff, #fff, transparent, #fff), url("/botanical.png")' }}>
+        <div className="flex flex-col py-4 rounded-3xl px-4 bg-white h-full" style={{ backgroundImage: 'linear-gradient(to left bottom, #fff, #fff, #fff, #fff, transparent, #fff), url("/story-botanical.png")' }}>
             <div className="flex items-center">
-                <Image src="/logo.svg" width={48} height={48} alt="logo" className="rounded-full" />
+                <Image src="/brand-logo.svg" width={48} height={48} alt="logo" className="rounded-full" />
                 <button className="p-3 bg-background rounded-full ml-auto">
                     <Search size={24} />
                 </button>

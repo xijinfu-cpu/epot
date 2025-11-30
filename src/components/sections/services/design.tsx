@@ -17,6 +17,7 @@ import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Card from "@/components/ui/card";
 import { Safari } from "@/components/magicui/safari";
+import Image from "next/image";
 
 interface DesigningProps {
     className?: string
@@ -24,58 +25,47 @@ interface DesigningProps {
 
 const Designing: FunctionComponent<DesigningProps> = ({ className }) => {
     const services = [{
-        name: 'UI Design',
-        sub: 'Clean, intuitive interfaces based on user needs and behavior.',
+        name: 'Desain UI',
+        sub: 'Antarmuka yang bersih dan intuitif berdasarkan kebutuhan dan perilaku pengguna.',
         key: 'ui',
     }, {
-        name: 'Design System',
-        sub: 'Reusable components, clear rules, and seamless developer handoff',
+        name: 'Sistem Desain',
+        sub: 'Komponen yang dapat digunakan kembali, aturan jelas, dan serah terima developer yang mulus',
         key: 'ds',
     }, {
         name: 'Wireframe',
-        sub: 'Structural blueprints to align on flow and layout early.',
+        sub: 'Blueprint struktural untuk menyelaraskan alur dan tata letak sejak awal.',
         key: 'wr',
     }]
     return (
         <section className={cn("pt-20 md:pt-40 pb-20 max-sm:px-5", className)} id="designing">
             <div className="max-w-5xl mx-auto pb-10 font-medium relative">
                 <h1 className="text-2xl md:text-4xl md:leading-12 my-2">
-                    Design, <br /><span className="text-neutral-400">That Works for Real Users — Not Just Screens.</span>
+                    Desain, <br /><span className="text-neutral-400">Yang Bekerja untuk Pengguna Nyata — Bukan Hanya Layar.</span>
                 </h1>
                 <p className="md:text-xl font-normal my-5 text-neutral-600 relative max-w-2xl">
-                    Intuitive, accessible, and delightful experiences — from wireframes to interactive prototypes. We design for use, not just aesthetics.
+                    Pengalaman yang intuitif, dapat diakses, dan menyenangkan — dari wireframe hingga prototipe interaktif. Kami mendesain untuk penggunaan, bukan hanya estetika.
                 </p>
-                <div className="flex absolute -top-10 md:top-30 md:-right-18 gap-5">
-                    <Icon icon={"logos:figma"} className="size-6 md:size-12" />
-                    <Icon icon={"logos:adobe-xd"} className="size-6 md:size-12" />
-                    <Icon icon={"logos:sketch"} className="size-6 md:size-12" />
+                <div className="flex absolute -top-8 md:-top-4 lg:top-30 right-0 md:-right-10 lg:-right-18 gap-3 md:gap-4 lg:gap-5">
+                    <Icon icon={"logos:figma"} className="size-8 md:size-10 lg:size-12" />
+                    <Icon icon={"logos:adobe-xd"} className="size-8 md:size-10 lg:size-12" />
+                    <Icon icon={"logos:sketch"} className="size-8 md:size-10 lg:size-12" />
                 </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 font-medium w-fit mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 font-medium w-full max-w-6xl mx-auto px-5 md:px-0">
                 {
-                    services.map((service, i) => <Card sm altStyle reverse={i == 1} title={service.name} sub={service.sub} key={i} className="min-h-96 md:w-96">
-                        {service.key === "wr" && <div className="h-80 flex items-center justify-center duration-300 overflow-hidden rounded-xl right-0 bg-background">
-                            <div className="bg-white p-2 w-72 h-56 rounded-lg">
-                                <header className="bg-background h-4 rounded"></header>
-                                <div className="grid grid-cols-2 mt-5 gap-5 px-5">
-                                    <div className="space-y-2 pt-5">
-                                        <div className="bg-background h-2 rounded"></div>
-                                        <div className="bg-background h-2 w-1/2 rounded"></div>
-                                        <div className="bg-background h-2 w-1/3 rounded"></div>
-                                    </div>
-                                    <div className="bg-background h-18 rounded"></div>
-                                </div>
-                                <div className="grid grid-cols-2 mt-5 gap-5 px-5">
-                                    <div className="space-y-2 pt-5">
-                                        <div className="bg-background h-2 rounded"></div>
-                                        <div className="bg-background h-2 w-1/2 rounded"></div>
-                                        <div className="bg-background h-2 w-1/3 rounded"></div>
-                                    </div>
-                                    <div className="bg-background h-18 rounded"></div>
-                                </div>
-                            </div>
+                    services.map((service, i) => <Card sm altStyle reverse={i == 1} title={service.name} sub={service.sub} key={i} className="min-h-96 w-full">
+                        {service.key === "wr" && <div className="duration-300 overflow-hidden rounded-xl bg-background p-3 flex flex-col gap-3 h-full">
+                            <Image
+                                src="/design-wireframe.gif"
+                                alt="Contoh wireframe"
+                                width={640}
+                                height={360}
+                                className="w-full rounded-lg border border-neutral-200 shadow-sm object-cover"
+                                priority
+                            />
                         </div>}
-                        {service.key === 'ds' && <div className="h-80 px-5 font-medium duration-300 overflow-hidden rounded-xl bg-background">
+                        {service.key === 'ds' && <div className="px-5 font-medium duration-300 overflow-hidden rounded-xl bg-background aspect-[4/3] md:aspect-[5/4] w-full">
                             <InfiniteSlider gap={20} direction="vertical" reverse speed={40}>
                                 <div>
                                     <p className="mb-2 text-sm">Button Sizes</p>
@@ -156,11 +146,11 @@ const Designing: FunctionComponent<DesigningProps> = ({ className }) => {
                                 </div>
                             </InfiniteSlider>
                         </div>}
-                        {service.key === "ui" && <div className="h-80 duration-300 overflow-hidden rounded-xl right-0 bg-background p-5">
+                        {service.key === "ui" && <div className="duration-300 overflow-hidden rounded-xl bg-background p-5 aspect-[4/3] md:aspect-[5/4] w-full">
                             <Safari
-                                url="kartikey.ai"
+                                url="effortless.agency"
                                 className="size-full"
-                                imageSrc="/kartikey-ui-design.png"
+                                imageSrc="/design-ui-preview.png"
                             />
                         </div>}
                     </Card>)
@@ -172,3 +162,4 @@ const Designing: FunctionComponent<DesigningProps> = ({ className }) => {
 }
 
 export default Designing;
+

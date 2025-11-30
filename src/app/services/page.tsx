@@ -11,34 +11,34 @@ import { MoveRight } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Services — Sharang Tech Labs",
+    title: "Layanan — Effortless",
 };
 
 export default function Services() {
     const FAQs = [
         {
-            question: "What services do you offer?",
-            answer: "We offer branding, design, full-stack development, AI integration, Custom Model development, UX audit, technical audits and more. From idea to launch, we handle the full product lifecycle and beyond that."
+            question: "Layanan apa yang Anda tawarkan?",
+            answer: "Kami menawarkan branding, desain, pengembangan full-stack, integrasi AI, pengembangan Model Kustom, audit UX, audit teknis dan lainnya. Dari ide hingga peluncuran, kami menangani seluruh siklus produk dan lebih dari itu."
         },
         {
-            question: "Do you work with startups?",
-            answer: "Yes. We specialize in helping early-stage and growing startups launch MVPs, fix code, and add AI — with speed and clarity."
+            question: "Apakah Anda bekerja dengan startup?",
+            answer: "Ya. Kami mengkhususkan diri dalam membantu startup tahap awal dan berkembang meluncurkan MVP, memperbaiki kode, dan menambahkan AI — dengan kecepatan dan kejelasan."
         },
         {
-            question: "How long does a project take?",
-            answer: "Most MVPs take 6–10 weeks; full platforms take 10–16 weeks. After scoping, we give a clear timeline — and stick to it."
+            question: "Berapa lama waktu proyek?",
+            answer: "Sebagian besar MVP membutuhkan 6–10 minggu; platform penuh membutuhkan 10–16 minggu. Setelah scoping, kami memberikan jadwal yang jelas — dan menaatinya."
         },
         {
-            question: "Who owns the IP after delivery?",
-            answer: "You do — 100%. All source code, designs, and assets are handed over to you. We only retain rights to reusable tools and frameworks."
+            question: "Siapa yang memiliki IP setelah pengiriman?",
+            answer: "Anda — 100%. Semua kode sumber, desain, dan aset diserahkan kepada Anda. Kami hanya mempertahankan hak untuk tools dan framework yang dapat digunakan kembali."
         },
         {
-            question: "Do you work remotely?",
-            answer: "Yes — we’re fully remote and collaborate with founders globally. We use Slack, GitHub, and weekly syncs to keep communication fast and clear."
+            question: "Apakah Anda bekerja secara remote?",
+            answer: "Ya — kami sepenuhnya remote dan berkolaborasi dengan pendiri secara global. Kami menggunakan Slack, GitHub, dan sinkronisasi mingguan untuk menjaga komunikasi cepat dan jelas."
         },
         {
-            question: "Do you sign NDA?",
-            answer: "Yes — we do."
+            question: "Apakah Anda menandatangani NDA?",
+            answer: "Ya — kami melakukannya."
         }
     ]
     return (
@@ -50,28 +50,28 @@ export default function Services() {
             <Audit />
             <section className="pt-20 md:pt-40 pb-20 max-sm:px-5 font-medium relative">
                 <div className="max-w-5xl mx-auto">
-                    <span className="border text-sm py-1 px-3 border-neutral-300 rounded-2xl">How We Work</span>
+                    <span className="border text-sm py-1 px-3 border-neutral-300 rounded-2xl">Cara Kami Bekerja</span>
                     <h1 className="md:text-4xl md:leading-12 text-2xl my-2">
-                        Our Flow<br /><span className="text-neutral-400">Simple. Clear. No surprises.</span>
+                        Alur Kami<br /><span className="text-neutral-400">Sederhana. Jelas. Tanpa kejutan.</span>
                     </h1>
                 </div>
                 <div className="mt-10 grid md:grid-cols-3 gap-4 relative max-w-6xl mx-auto">
-                    <Image src={"/up.svg"} height={128} width={128} alt="up-arrow" className="absolute hidden md:block opacity-10 -top-20 rotate-12 right-75" />
-                    <Image src={"/down.svg"} height={128} width={128} alt="down-arrow" className="absolute hidden md:block opacity-10 -bottom-20 left-75" />
+                    <Image src={"/arrow-up.svg"} height={128} width={128} alt="up-arrow" className="absolute hidden md:block opacity-10 -top-20 rotate-12 right-75" />
+                    <Image src={"/arrow-down.svg"} height={128} width={128} alt="down-arrow" className="absolute hidden md:block opacity-10 -bottom-20 left-75" />
                     {[
                         {
-                            icon: 'solar:file-smile-bold-duotone',
-                            name: 'Understand',
-                            desc: 'We align on your goals, users, and constraints.'
+                            icon: 'solar:compass-bold-duotone',
+                            name: 'Memahami',
+                            desc: 'Kami menyelaraskan tujuan, pengguna, dan batasan Anda.'
                         },
                         {
-                            icon: 'solar:settings-minimalistic-bold-duotone',
-                            name: 'Build',
-                            desc: 'We design, code, and test — with weekly updates.'
+                            icon: 'solar:code-square-bold-duotone',
+                            name: 'Membangun',
+                            desc: 'Kami mendesain, coding, dan menguji — dengan pembaruan mingguan.'
                         }, {
-                            icon: 'solar:rocket-bold-duotone',
-                            name: 'Deliver',
-                            desc: 'We launch, support, and hand over — no loose ends.'
+                            icon: 'solar:rocket-2-bold-duotone',
+                            name: 'Mengirim',
+                            desc: 'Kami meluncurkan, mendukung, dan menyerahkan — tanpa ujung yang longgar.'
                         },].map((item, i) => <div key={i} className="bg-white h-64 flex flex-col rounded-xl p-8">
                             <Icon icon={item.icon} className="size-10 text-blue-500" />
                             <h3 className="text-xl mt-auto">
@@ -85,9 +85,9 @@ export default function Services() {
             </section>
             <section className="pt-20 md:pt-40 pb-20 max-sm:px-5 font-medium relative">
                 <div className="max-w-5xl mx-auto">
-                    <span className="border text-sm py-1 px-3 border-neutral-300 rounded-2xl">Questions? We’ve Got Answers</span>
+                    <span className="border text-sm py-1 px-3 border-neutral-300 rounded-2xl">Ada Pertanyaan? Kami Punya Jawaban</span>
                     <h1 className="md:text-4xl md:leading-12 text-2xl my-2">
-                        Frequently Asked Questions<br /><span className="text-neutral-400">Everything you need to know about how we work, timelines, and what to expect.</span>
+                        Pertanyaan yang Sering Diajukan<br /><span className="text-neutral-400">Semua yang perlu Anda ketahui tentang cara kami bekerja, jadwal, dan apa yang diharapkan.</span>
                     </h1>
                 </div>
                 <Accordion
@@ -115,9 +115,9 @@ export default function Services() {
                 <div className="max-w-5xl p-5 rounded-xl bg-white mx-5 md:mx-auto">
                     <Link href={"/contact"} className="flex group font-medium">
                         <span>
-                            <span className="text-sm md:pl-2">Something we can help with?</span>
+                            <span className="text-sm md:pl-2">Ada yang bisa kami bantu?</span>
                             <h1 className="md:text-8xl text-3xl">
-                                Let&apos;s Connect
+                                Mari Terhubung
                             </h1>
                         </span>
                         <MoveRight className="ml-auto -translate-x-10 group-hover:translate-x-0 duration-300 group-hover:text-blue-600 size-10 max-md:mt-auto md:size-32" />
@@ -125,7 +125,7 @@ export default function Services() {
                 </div>
             </section>
             {/* <section className="max-w-6xl mx-auto px-5 py-10 md:py-20 mb-17 font-medium overflow-hidden relative text-center bg-white rounded-xl">
-                <Image src={"/hands.png"} width={512} height={400} alt="hands" className="absolute rotate-90 max-sm:hidden top-30 -left-30" />
+                <Image src={"/story-hands.png"} width={512} height={400} alt="hands" className="absolute rotate-90 max-sm:hidden top-30 -left-30" />
                 <div className="max-w-lg mx-auto">
                     <span className="border text-sm py-1 px-3 border-neutral-300 rounded-2xl">Ready to Build?</span>
                     <h1 className="text-2xl leading-10 my-2">
@@ -149,3 +149,4 @@ export default function Services() {
         </>
     );
 }
+

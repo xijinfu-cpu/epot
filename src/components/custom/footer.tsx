@@ -12,36 +12,31 @@ const Footer: FunctionComponent<FooterProps> = ({ className }) => {
     return (
         <footer className={cn("grid mt-40 mx-5 md:mx-auto max-w-3xl", className)}>
             <div className="flex items-center">
-                <Image src="/Sharang.png" width={64} height={64} alt="logo" className="rounded-2xl" />
+                <Image src="/brand-logo.svg" width={64} height={64} alt="logo" className="rounded-1xl" />
                 <div className="ml-4">
                     <h5 className="text-2xl font-semibold">
-                        Sharang Tech Labs
+                        Effortless
                     </h5>
                     <p className="text-sm text-neutral-500 font-medium">
-                        Ignite, Scale, Secure.
+                    Digital Agency
                     </p>
                 </div>
             </div>
             <div className="grid font-medium mt-20 pb-10 grid-cols-1 md:grid-cols-3 gap-5">
                 <div>
-                    <p className="text-sm text-neutral-500">1. Pages</p>
+                    <p className="text-sm text-neutral-500">1. Halaman</p>
                     <ul className="mt-4 space-y-2">
                         {[{
-                            label: 'Services',
+                            label: 'Layanan',
                             link: '/services'
                         }, {
-                            label: 'Client Stories',
+                            label: 'Cerita Klien',
                             link: '/client-stories'
-                        }
-                            , {
-                            label: 'Open Source',
-                            link: '//github.com/sharang-tech',
-                            ext: true
                         }, {
-                            label: 'About us',
-                            link: '/about-us'
+                            label: 'Tentang Kami',
+                            link: '/about'
                         }, {
-                            label: 'Careers',
+                            label: 'Karir',
                             link: '/career'
                         }].map((page, i) => <li key={i}>
                             <Link href={page.link} className="hover:text-blue-600 flex items-center gap-1 duration-300">
@@ -51,20 +46,20 @@ const Footer: FunctionComponent<FooterProps> = ({ className }) => {
                     </ul>
                 </div>
                 <div>
-                    <p className="text-sm text-neutral-500">2. Connect</p>
+                    <p className="text-sm text-neutral-500">2. Terhubung</p>
                     <ul className="mt-4 space-y-2">
                         {[{
                             label: 'LinkedIn',
-                            link: '//linkedin.com/sharanghq',
+                            link: '//linkedin.com/company/effortless.agency',
                             ext: true
                         }, {
-                            label: 'Dribbble',
-                            link: '//dribbble.com/sharanghq',
+                            label: 'Instagram',
+                            link: '//instagram.com/effortless.agency',
                             ext: true
                         }
                             , {
-                            label: 'X',
-                            link: '//x.com/sharanghq',
+                            label: 'WhatsApp',
+                            link: '//wa.me/6287775566404',
                             ext: true
                         }].map((page, i) => <li key={i}>
                             <Link href={page.link} className="hover:text-blue-600 flex items-center gap-1 duration-300">
@@ -77,15 +72,15 @@ const Footer: FunctionComponent<FooterProps> = ({ className }) => {
                     <p className="text-sm text-neutral-500">3. Legal</p>
                     <ul className="mt-4 space-y-2">
                         {[{
-                            label: 'Terms',
-                            link: '/legal/terms'
+                            label: 'Syarat & Ketentuan',
+                            link: '/terms'
                         }, {
-                            label: 'Privacy',
-                            link: '/legal/privacy'
+                            label: 'Privasi',
+                            link: '/privacy'
                         }
                             , {
-                            label: 'Data Handling',
-                            link: '/legal/data-handling'
+                            label: 'Pengelolaan Data',
+                            link: '/data-handling'
                         }].map((page, i) => <li key={i}>
                             <Link href={page.link} className="hover:text-blue-600 duration-300">
                                 {page.label}
@@ -99,7 +94,7 @@ const Footer: FunctionComponent<FooterProps> = ({ className }) => {
             </div>
             <div className="py-5 border-t border-neutral-300">
                 <p className="text-sm text-neutral-500">
-                    &copy; Sharang Tech Labs. All rights reserved. Building stuffs since 2016.
+                    &copy;2025 - PT Effortless Digital Agency. Hak cipta dilindungi.
                 </p>
             </div>
         </footer>
@@ -107,3 +102,4 @@ const Footer: FunctionComponent<FooterProps> = ({ className }) => {
 }
 
 export default Footer;
+

@@ -12,25 +12,21 @@ interface WorkProps {
 
 const Work: FunctionComponent<WorkProps> = ({ className }) => {
     const openSource = [{
-        name: 'Cloud CTL',
-        desc: 'Unified Cloud Infrastructure Management Tool, with MCP enabled for AI usage.',
-        logo: '/cloudctl.png',
-        website: '//cloudctl.xyz',
+        name: 'Nikah Fix',
+        desc: 'NikahFix adalah tema website undangan pernikahan bergaya Netflix: modern, sinematik, dan responsif.',
+        logo: '/logo-nikahfix.png',
+        website: '//nikahfix.digsy.my.id',
     }, {
-        name: 'Snap Sphere',
-        desc: 'Automate and manage snapshots across multiple providers with custom policies.',
-        logo: '/snapsphere.png',
-    }, {
-        name: 'Stack Gen',
-        desc: 'CLI tool to generate boilerplate code for popular frameworks, highly customizable.',
-        logo: '/stackgen.png',
+        name: 'Digsy',
+        desc: 'Digsy adalah tema website perusahaan digital berbasis WordPress yang modern, intuitif, dan responsif.',
+        logo: '/logo-digsy.png',
     }]
     return (<>
         <section className={cn("w-full py-20", className)}>
             <div className="max-w-5xl mx-5 md:mx-auto mb-5 font-medium">
-                <span className="border text-sm py-1 px-3 border-neutral-300 rounded-2xl">Client Stories</span>
+                <span className="border text-sm py-1 px-3 border-neutral-300 rounded-2xl">Cerita Klien</span>
                 <h1 className="text-2xl md:text-4xl md:leading-12 my-2">
-                    Work in Works, <br /><span className="text-neutral-400">From brand to code to audit — we cover every layer.</span>
+                    Karya dalam Proses, <br /><span className="text-neutral-400">Dari brand hingga kode hingga audit — kami menangani setiap lapisan.</span>
                 </h1>
             </div>
             <ClientStoriesGrid />
@@ -45,7 +41,7 @@ const Work: FunctionComponent<WorkProps> = ({ className }) => {
                             <p className="mt-2 text-neutral-500 text-sm">{item.desc}</p>
                             {item.website && <Button variant={"outline"} asChild className="bg-background mt-4 !pl-4 hover:bg-neutral-200 py-1 px-2 text-sm">
                                 <Link href={item.website} target="_blank">
-                                    Visit Project <ArrowUpRight />
+                                    Kunjungi Proyek <ArrowUpRight />
                                 </Link>
                             </Button>}
                         </div>
@@ -57,3 +53,4 @@ const Work: FunctionComponent<WorkProps> = ({ className }) => {
 }
 
 export default Work;
+

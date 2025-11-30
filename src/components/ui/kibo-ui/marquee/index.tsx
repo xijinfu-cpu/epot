@@ -57,3 +57,4 @@ export const MarqueeItem = ({ className, ...props }: MarqueeItemProps) => (
     {...props}
   />
 );
+

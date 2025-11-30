@@ -1,0 +1,15 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background biru -->
+  <rect x="0" y="0" width="400" height="400" fill="#2638C4"/>
+  <!-- Grup "F" dengan transformasi -->
+  <g transform="translate(105, 40)">
+    <!-- Batang utama F -->
+    <rect x="0" y="40" width="60" height="240" fill="#fff"/>
+    <!-- Garis atas F -->
+    <rect x="50" y="40" width="120" height="40" fill="#fff"/>
+    <!-- Garis tengah F -->
+    <rect x="50" y="140" width="120" height="40" fill="#fff"/>
+    <!-- Garis bawah F -->
+    <rect x="80" y="240" width="90" height="40" fill="#fff"/>
+  </g>
+</svg>
