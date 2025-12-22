@@ -28,7 +28,6 @@ export const metadata: Metadata = {
   applicationName: "Effortless",
   keywords: ["NGO", "women empowerment", "agriculture development", "child welfare", "elderly care", "education", "India foundation"],
   authors: [{ name: "Effortless" }],
-  viewport: "width=device-width, initial-scale=1",
   openGraph: {
     title: "Effortless",
     description: "Effortless is a full-stack software and AI lab. We build intelligent products for startups, mission-driven teams, and our own experiments.",
