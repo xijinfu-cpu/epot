@@ -1,4 +1,4 @@
 {
-  "installCommand": "git lfs install --local && (git remote set-url origin \"$VERCEL_GIT_REPO_URL\" || git remote add origin \"$VERCEL_GIT_REPO_URL\") && git lfs fetch origin --all && git lfs checkout && npm install",
+  "installCommand": "git lfs install --local && (git config remote.origin.url >/dev/null 2>&1 || git remote add origin \"${VERCEL_GIT_REPO_URL:-https://github.com/xijinfu-cpu/epot.git}\") && git lfs fetch origin --all && git lfs checkout && npm install",
   "buildCommand": "npm run build"
 }
