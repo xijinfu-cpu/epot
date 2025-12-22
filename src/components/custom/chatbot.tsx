@@ -96,9 +96,14 @@ export default function ChatBot() {
                 {open && (
                     <div className="w-[min(90vw,22rem)] sm:w-96 rounded-2xl shadow-2xl border border-border bg-white dark:bg-neutral-900 flex flex-col overflow-hidden">
                         <div className="flex items-center justify-between px-4 py-3 bg-primary text-primary-foreground">
-                            <div className="flex items-center gap-2 text-sm font-semibold">
-                                <Sparkles className="size-4" />
-                                Effortless Chat Bot
+                            <div className="flex flex-col">
+                                <div className="flex items-center gap-2 text-sm font-semibold">
+                                    <Sparkles className="size-4" />
+                                    Ada Pertanyaan? Kami Punya Jawaban
+                                </div>
+                                <span className="text-[11px] text-primary-foreground/80 font-normal leading-tight">
+                                    Pertanyaan yang Sering Diajukan
+                                </span>
                             </div>
                             <Button size="icon" variant="ghost" className="text-primary-foreground" onClick={() => setOpen(false)}>
                                 <X className="size-4" />
