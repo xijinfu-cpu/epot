@@ -1,4 +1,4 @@
 {
-  "installCommand": "git lfs install --local && git lfs fetch origin --all && git lfs checkout && npm install",
+  "installCommand": "git lfs install --local && git lfs fetch origin main && git lfs checkout && npm install",
   "buildCommand": "npm run build"
 }
