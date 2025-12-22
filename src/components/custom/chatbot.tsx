@@ -15,31 +15,46 @@ interface Message {
 }
 
 const suggestions = [
-    "Bisa bantu hitung estimasi biaya?",
-    "Berapa lama buat website custom?",
-    "Apa saja layanan AI kalian?",
+    "Layanan apa yang Anda tawarkan?",
+    "Apakah Anda bekerja dengan startup?",
+    "Berapa lama waktu proyek?",
+    "Siapa yang memiliki IP setelah pengiriman?",
+    "Apakah Anda bekerja secara remote?",
+    "Apakah Anda menandatangani NDA?",
 ];
 
 const botReplies = {
-    pricing: "Untuk estimasi biaya, kami biasanya melakukan discovery singkat terlebih dahulu. Ceritakan jenis proyek atau fitur utama yang dibutuhkan, nanti kami siapkan kisaran anggaran dan timeline awal.",
-    timeline: "Sebagian besar proyek website lengkap selesai dalam 4-8 minggu tergantung kompleksitas integrasi. Sprint awal fokus pada desain, kemudian development dan implementasi AI/otomasi.",
-    services: "Kami membantu branding, desain produk digital, pengembangan web & aplikasi, serta eksperimen AI. Semua layanan kami dirancang end-to-end dari riset hingga deployment.",
-    default: "Saya siap bantu menjawab pertanyaan seputar layanan Effortless. Ceritakan kebutuhanmu, dan kami arahkan langkah berikutnya."
-}
+    services: "Kami menangani strategi brand, desain UI/UX, pengembangan web/app, sistem desain, hingga solusi AI (chatbot, otomasi, dan analitik). Semua bisa disesuaikan kebutuhan bisnis.",
+    startup: "Ya. Banyak klien kami adalah startup tahap awal hingga growth. Kami membantu merapikan produk, alur, dan aset brand supaya siap scale.",
+    timeline: "Rata-rata proyek utama selesai 4-8 minggu tergantung scope. Kami biasa memulai dengan kickoff dan sprint desain, lalu development serta QA.",
+    ip: "Hak kekayaan intelektual (IP) menjadi milik klien setelah serah terima dan pelunasan sesuai perjanjian.",
+    remote: "Ya, kami bekerja remote dan rutin sinkron via call, workspace kolaboratif, serta update mingguan.",
+    nda: "Bisa. Kami terbiasa menandatangani NDA sebelum menerima detail sensitif.",
+    default: "Saya siap bantu menjawab pertanyaanmu. Pilih salah satu pertanyaan di atas atau ketik hal lain yang ingin kamu tahu."
+};
 
 const getBotResponse = (text: string) => {
     const lower = text.toLowerCase();
-    if (lower.includes("harga") || lower.includes("biaya") || lower.includes("budget")) {
-        return botReplies.pricing;
-    }
-    if (lower.includes("lama") || lower.includes("timeline") || lower.includes("waktu")) {
-        return botReplies.timeline;
-    }
-    if (lower.includes("layanan") || lower.includes("apa saja") || lower.includes("services") || lower.includes("ai")) {
+    if (lower.includes("layanan") || lower.includes("tawarkan")) {
         return botReplies.services;
     }
+    if (lower.includes("startup")) {
+        return botReplies.startup;
+    }
+    if (lower.includes("lama") || lower.includes("timeline") || lower.includes("waktu") || lower.includes("durasi")) {
+        return botReplies.timeline;
+    }
+    if (lower.includes("ip") || lower.includes("kekayaan") || lower.includes("hak") || lower.includes("kepemilikan")) {
+        return botReplies.ip;
+    }
+    if (lower.includes("remote") || lower.includes("jarak jauh") || lower.includes("daring")) {
+        return botReplies.remote;
+    }
+    if (lower.includes("nda") || lower.includes("non disclosure") || lower.includes("kerahasiaan")) {
+        return botReplies.nda;
+    }
     return botReplies.default;
-}
+};
 
 const formatTime = (timestamp: number) => new Date(timestamp).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
 
@@ -50,7 +65,7 @@ export default function ChatBot() {
     const [messages, setMessages] = useState<Message[]>(() => [{
         id: "welcome",
         from: "bot",
-        text: "Hai! Aku asisten AI Effortless. Tanyakan apa saja tentang layanan, timeline, atau kolaborasi.",
+        text: "Hai! Aku asisten AI Effortless. Pilih pertanyaan di bawah atau ketik langsung untuk tahu lebih lanjut.",
         timestamp: Date.now(),
     }]);
     const endRef = useRef<HTMLDivElement | null>(null);
@@ -96,14 +111,9 @@ export default function ChatBot() {
                 {open && (
                     <div className="w-[min(90vw,22rem)] sm:w-96 rounded-2xl shadow-2xl border border-border bg-white dark:bg-neutral-900 flex flex-col overflow-hidden">
                         <div className="flex items-center justify-between px-4 py-3 bg-primary text-primary-foreground">
-                            <div className="flex flex-col">
-                                <div className="flex items-center gap-2 text-sm font-semibold">
-                                    <Sparkles className="size-4" />
-                                    Ada Pertanyaan? Kami Punya Jawaban
-                                </div>
-                                <span className="text-[11px] text-primary-foreground/80 font-normal leading-tight">
-                                    Pertanyaan yang Sering Diajukan
-                                </span>
+                            <div className="flex items-center gap-2 text-sm font-semibold">
+                                <Sparkles className="size-4" />
+                                Effortless Chat Bot
                             </div>
                             <Button size="icon" variant="ghost" className="text-primary-foreground" onClick={() => setOpen(false)}>
                                 <X className="size-4" />

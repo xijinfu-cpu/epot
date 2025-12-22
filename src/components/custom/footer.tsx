@@ -8,7 +8,32 @@ interface FooterProps {
     className?: string
 }
 
+type FooterLink = {
+    label: string;
+    link: string;
+    ext?: boolean;
+};
+
 const Footer: FunctionComponent<FooterProps> = ({ className }) => {
+    const pageLinks: FooterLink[] = [
+        { label: 'Layanan', link: '/services' },
+        { label: 'Cerita Klien', link: '/client-stories' },
+        { label: 'Tentang Kami', link: '/about' },
+        { label: 'Karir', link: '/career' },
+    ];
+
+    const connectLinks: FooterLink[] = [
+        { label: 'LinkedIn', link: '//linkedin.com/company/effortless.agency', ext: true },
+        { label: 'Instagram', link: '//instagram.com/effortless.agency', ext: true },
+        { label: 'WhatsApp', link: '//wa.me/6287775566404', ext: true },
+    ];
+
+    const legalLinks: FooterLink[] = [
+        { label: 'Syarat & Ketentuan', link: '/terms' },
+        { label: 'Privasi', link: '/privacy' },
+        { label: 'Pengelolaan Data', link: '/data-handling' },
+    ];
+
     return (
         <footer className={cn("grid mt-40 mx-5 md:mx-auto max-w-3xl", className)}>
             <div className="flex items-center">
@@ -26,19 +51,7 @@ const Footer: FunctionComponent<FooterProps> = ({ className }) => {
                 <div>
                     <p className="text-sm text-neutral-500">1. Halaman</p>
                     <ul className="mt-4 space-y-2">
-                        {[{
-                            label: 'Layanan',
-                            link: '/services'
-                        }, {
-                            label: 'Cerita Klien',
-                            link: '/client-stories'
-                        }, {
-                            label: 'Tentang Kami',
-                            link: '/about'
-                        }, {
-                            label: 'Karir',
-                            link: '/career'
-                        }].map((page, i) => <li key={i}>
+                        {pageLinks.map((page, i) => <li key={i}>
                             <Link href={page.link} className="hover:text-blue-600 flex items-center gap-1 duration-300">
                                 {page.label} {page.ext && <ArrowUpRight size={20} strokeWidth={1} />}
                             </Link>
@@ -48,20 +61,7 @@ const Footer: FunctionComponent<FooterProps> = ({ className }) => {
                 <div>
                     <p className="text-sm text-neutral-500">2. Terhubung</p>
                     <ul className="mt-4 space-y-2">
-                        {[{
-                            label: 'LinkedIn',
-                            link: '//linkedin.com/company/effortless.agency',
-                            ext: true
-                        }, {
-                            label: 'Instagram',
-                            link: '//instagram.com/effortless.agency',
-                            ext: true
-                        }
-                            , {
-                            label: 'WhatsApp',
-                            link: '//wa.me/6287775566404',
-                            ext: true
-                        }].map((page, i) => <li key={i}>
+                        {connectLinks.map((page, i) => <li key={i}>
                             <Link href={page.link} className="hover:text-blue-600 flex items-center gap-1 duration-300">
                                 {page.label} {page.ext && <ArrowUpRight size={20} strokeWidth={1} />}
                             </Link>
@@ -71,17 +71,7 @@ const Footer: FunctionComponent<FooterProps> = ({ className }) => {
                 <div>
                     <p className="text-sm text-neutral-500">3. Legal</p>
                     <ul className="mt-4 space-y-2">
-                        {[{
-                            label: 'Syarat & Ketentuan',
-                            link: '/terms'
-                        }, {
-                            label: 'Privasi',
-                            link: '/privacy'
-                        }
-                            , {
-                            label: 'Pengelolaan Data',
-                            link: '/data-handling'
-                        }].map((page, i) => <li key={i}>
+                        {legalLinks.map((page, i) => <li key={i}>
                             <Link href={page.link} className="hover:text-blue-600 duration-300">
                                 {page.label}
                             </Link>

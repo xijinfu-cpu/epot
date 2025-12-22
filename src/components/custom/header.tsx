@@ -13,12 +13,25 @@ interface HeaderProps {
     className?: string
 }
 
+type NavLink = {
+    name: string;
+    href: string;
+    ext?: boolean;
+};
+
 const Header: FunctionComponent<HeaderProps> = ({ className }) => {
     const pathname = usePathname();
     const [offset, setOffset] = useState(0);
     const [visible, setVisible] = useState(true);
     const [Open, setOpen] = useState(false)
     const lastScrollY = useRef(0);
+    const navLinks: NavLink[] = [
+        { name: 'Beranda', href: '/' },
+        { name: 'Layanan', href: '/services' },
+        { name: 'Cerita Klien', href: '/client-stories' },
+        { name: 'Tentang Kami', href: '/about' },
+        { name: 'Tim', href: '/team' },
+    ];
     useEffect(() => {
         lastScrollY.current = window.scrollY;
         function onScroll() {
@@ -51,22 +64,7 @@ const Header: FunctionComponent<HeaderProps> = ({ className }) => {
                     <HyperText preserveCase className={`text-sm font-medium max-md:hidden`}>effortless</HyperText>
                 </Link>
                 <nav className={`hidden md:flex text-sm items-center gap-2 mx-auto`}>
-                    {[{
-                        name: 'Beranda',
-                        href: '/',
-                    }, {
-                        name: 'Layanan',
-                        href: '/services',
-                    }, {
-                        name: 'Cerita Klien',
-                        href: '/client-stories',
-                    }, {
-                        name: 'Tentang Kami',
-                        href: '/about',
-                    }, {
-                        name: 'Tim',
-                        href: '/team',
-                    },].map((item, index) => (
+                    {navLinks.map((item, index) => (
                         <Link href={item.href} key={index} data-active={item.href === pathname} className="data-[active=true]:text-blue-500 hover:bg-white data-[active=true]:bg-white flex items-center gap-1 rounded-full py-1.5 px-3 font-medium duration-300 hover:text-blue-500">{item.name} {item.ext && <ArrowUpRight size={20} strokeWidth={1.5} />}</Link>
                     ))}
                 </nav>
@@ -91,22 +89,7 @@ const Header: FunctionComponent<HeaderProps> = ({ className }) => {
                 </Button>
             </div>
             <nav className={`flex flex-col text-sm justify-center mt-auto gap-2`}>
-                {[{
-                    name: 'Beranda',
-                    href: '/',
-                }, {
-                    name: 'Layanan',
-                    href: '/services',
-                }, {
-                    name: 'Cerita Klien',
-                    href: '/client-stories',
-                }, {
-                    name: 'Tentang Kami',
-                    href: '/about',
-                }, {
-                    name: 'Tim',
-                    href: '/team',
-                },].map((item, index) => (
+                {navLinks.map((item, index) => (
                     <Link href={item.href} key={index} data-active={item.href === pathname} className="data-[active=true]:text-blue-500 hover:bg-white data-[active=true]:bg-white w-fit flex items-center gap-1 rounded-full py-2 px-4 f text-xl font-medium duration-300 hover:text-blue-500">{item.name} {item.ext && <ArrowUpRight size={20} strokeWidth={1.5} />}</Link>
                 ))}
             </nav>
