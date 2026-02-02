@@ -159,9 +159,18 @@
   }
   html {
     @apply scroll-smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   body {
     @apply bg-background text-foreground overflow-x-hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-balance tracking-tight;
+  }
+  p {
+    @apply text-pretty;
   }
 }
 

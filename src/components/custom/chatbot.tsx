@@ -107,7 +107,7 @@ export default function ChatBot() {
 
     return (
         <>
-            <div className="fixed z-[999] bottom-4 right-4 md:bottom-6 md:right-6 flex flex-col items-end gap-3">
+            <div className="fixed z-[999] bottom-4 left-4 md:bottom-6 md:left-6 flex flex-col items-start gap-3">
                 {open && (
                     <div className="w-[min(90vw,22rem)] sm:w-96 rounded-2xl shadow-2xl border border-border bg-white dark:bg-neutral-900 flex flex-col overflow-hidden">
                         <div className="flex items-center justify-between px-4 py-3 bg-primary text-primary-foreground">
@@ -172,12 +172,11 @@ export default function ChatBot() {
                     </div>
                 )}
                 <Button
-                    size="lg"
+                    size="icon"
                     onClick={() => setOpen(prev => !prev)}
-                    className="rounded-full shadow-xl bg-primary text-primary-foreground hover:bg-primary/90 px-4 gap-2"
+                    className="rounded-full shadow-xl bg-primary text-primary-foreground hover:bg-primary/90 h-10 w-10"
                 >
-                    <MessageCircle className="size-5" />
-                    <span className="text-sm font-semibold">{open ? "Tutup Chat" : "Chat Bot"}</span>
+                    <MessageCircle className="size-7" />
                 </Button>
             </div>
         </>

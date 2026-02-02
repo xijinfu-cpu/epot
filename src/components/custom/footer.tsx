@@ -35,57 +35,71 @@ const Footer: FunctionComponent<FooterProps> = ({ className }) => {
     ];
 
     return (
-        <footer className={cn("grid mt-40 mx-5 md:mx-auto max-w-3xl", className)}>
-            <div className="flex items-center">
-                <Image src="/brand-logo.svg" width={64} height={64} alt="logo" className="rounded-1xl" />
-                <div className="ml-4">
-                    <h5 className="text-2xl font-semibold">
-                        Effortless
-                    </h5>
-                    <p className="text-sm text-neutral-500 font-medium">
-                    Digital Agency
-                    </p>
+        <footer className={cn("grid mt-10 mx-auto max-w-7xl pb-5 px-8 md:px-12", className)}>
+            <div className="flex items-start md:items-center justify-between flex-col md:flex-row gap-8 py-5 border-b border-dashed border-neutral-200 dark:border-neutral-800">
+                <div className="flex items-center gap-4">
+                    <div className="bg-white dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800 p-2 rounded-2xl shadow-sm">
+                        <Image src="/brand-logo.svg" width={48} height={48} alt="logo" className="rounded-xl" />
+                    </div>
+                    <div>
+                        <h5 className="text-2xl font-bold tracking-tight">
+                            Effortless
+                        </h5>
+                        <p className="text-sm text-neutral-500 font-medium">
+                            Digital Agency & Strategic Partner
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div className="grid font-medium mt-20 pb-10 grid-cols-1 md:grid-cols-3 gap-5">
+            <div className="grid font-medium mt-4 grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
                 <div>
-                    <p className="text-sm text-neutral-500">1. Halaman</p>
-                    <ul className="mt-4 space-y-2">
+                    <p className="text-xs font-semibold text-neutral-400 uppercase tracking-wider mb-6">Menu</p>
+                    <ul className="space-y-4">
                         {pageLinks.map((page, i) => <li key={i}>
-                            <Link href={page.link} className="hover:text-blue-600 flex items-center gap-1 duration-300">
-                                {page.label} {page.ext && <ArrowUpRight size={20} strokeWidth={1} />}
+                            <Link href={page.link} className="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white flex items-center gap-1 duration-300 text-sm font-medium">
+                                {page.label} {page.ext && <ArrowUpRight size={14} strokeWidth={1.5} />}
                             </Link>
                         </li>)}
                     </ul>
                 </div>
                 <div>
-                    <p className="text-sm text-neutral-500">2. Terhubung</p>
-                    <ul className="mt-4 space-y-2">
+                    <p className="text-xs font-semibold text-neutral-400 uppercase tracking-wider mb-6">Sosial</p>
+                    <ul className="space-y-4">
                         {connectLinks.map((page, i) => <li key={i}>
-                            <Link href={page.link} className="hover:text-blue-600 flex items-center gap-1 duration-300">
-                                {page.label} {page.ext && <ArrowUpRight size={20} strokeWidth={1} />}
+                            <Link href={page.link} className="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white flex items-center gap-1 duration-300 text-sm font-medium">
+                                {page.label} {page.ext && <ArrowUpRight size={14} strokeWidth={1.5} />}
                             </Link>
                         </li>)}
                     </ul>
                 </div>
                 <div>
-                    <p className="text-sm text-neutral-500">3. Legal</p>
-                    <ul className="mt-4 space-y-2">
+                    <p className="text-xs font-semibold text-neutral-400 uppercase tracking-wider mb-6">Legal</p>
+                    <ul className="space-y-4">
                         {legalLinks.map((page, i) => <li key={i}>
-                            <Link href={page.link} className="hover:text-blue-600 duration-300">
+                            <Link href={page.link} className="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white duration-300 text-sm font-medium">
                                 {page.label}
                             </Link>
                         </li>)}
                     </ul>
                 </div>
                 <div>
-
+                    <p className="text-xs font-semibold text-neutral-400 uppercase tracking-wider mb-6">Lokasi</p>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Effortless HQ<br />
+                        Jl. Raya Cikarang No. 123,<br />
+                        Garut, Jawa Barat 44111<br />
+                        Indonesia
+                    </p>
                 </div>
             </div>
-            <div className="py-5 border-t border-neutral-300">
+            <div className="mt-10 pt-8 border-t border-neutral-200 dark:border-neutral-800 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p className="text-sm text-neutral-500">
-                    &copy;2025 - PT Effortless Digital Agency. Hak cipta dilindungi.
+                    &copy; 2025 PT Effortless Digital Agency. All rights reserved.
                 </p>
+                <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    <span className="text-sm font-medium text-neutral-600 dark:text-neutral-400">All systems normal</span>
+                </div>
             </div>
         </footer>
     );

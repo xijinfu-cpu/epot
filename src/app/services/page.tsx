@@ -48,65 +48,64 @@ export default function Services() {
             <Designing />
             <Development />
             <Audit />
-            <section className="pt-20 md:pt-40 pb-20 max-sm:px-5 font-medium relative">
-                <div className="max-w-5xl mx-auto">
-                    <span className="border text-sm py-1 px-3 border-neutral-300 rounded-2xl">Cara Kami Bekerja</span>
-                    <h1 className="md:text-4xl md:leading-12 text-2xl my-2">
-                        Alur Kami<br /><span className="text-neutral-400">Sederhana. Jelas. Tanpa kejutan.</span>
+            <section className="pt-20 md:pt-32 pb-20 max-sm:px-5 font-medium relative bg-neutral-50 dark:bg-neutral-950">
+                <div className="max-w-6xl mx-auto">
+                    <span className="border text-xs font-semibold tracking-wider uppercase py-1.5 px-4 border-neutral-200 dark:border-neutral-800 rounded-full text-neutral-500">Metodologi</span>
+                    <h1 className="md:text-4xl md:leading-tight text-2xl my-4 font-medium tracking-tight">
+                        Proses Kerja.<br /><span className="text-neutral-500 font-normal">Sederhana. Transparan. Terukur.</span>
                     </h1>
                 </div>
-                <div className="mt-10 grid md:grid-cols-3 gap-4 relative max-w-6xl mx-auto">
-                    <Image src={"/arrow-up.svg"} height={128} width={128} alt="up-arrow" className="absolute hidden md:block opacity-10 -top-20 rotate-12 right-75" />
-                    <Image src={"/arrow-down.svg"} height={128} width={128} alt="down-arrow" className="absolute hidden md:block opacity-10 -bottom-20 left-75" />
+                <div className="mt-12 grid md:grid-cols-3 gap-6 relative max-w-7xl mx-auto">
+                    <Image src={"/arrow-up.svg"} height={128} width={128} alt="up-arrow" className="absolute hidden md:block opacity-5 -top-20 rotate-12 right-75" />
+                    <Image src={"/arrow-down.svg"} height={128} width={128} alt="down-arrow" className="absolute hidden md:block opacity-5 -bottom-20 left-75" />
                     {[
                         {
                             icon: 'solar:compass-bold-duotone',
-                            name: 'Memahami',
-                            desc: 'Kami menyelaraskan tujuan, pengguna, dan batasan Anda.'
+                            name: 'Discovery',
+                            desc: 'Kami mendalami tujuan bisnis, audiens, dan tantangan teknis Anda sebelum menulis satu baris kode pun.'
                         },
                         {
                             icon: 'solar:code-square-bold-duotone',
-                            name: 'Membangun',
-                            desc: 'Kami mendesain, coding, dan menguji — dengan pembaruan mingguan.'
+                            name: 'Development',
+                            desc: 'Sprint mingguan dengan demo langsung. Anda melihat progress nyata setiap minggu, bukan hanya laporan status.'
                         }, {
                             icon: 'solar:rocket-2-bold-duotone',
-                            name: 'Mengirim',
-                            desc: 'Kami meluncurkan, mendukung, dan menyerahkan — tanpa ujung yang longgar.'
-                        },].map((item, i) => <div key={i} className="bg-white h-64 flex flex-col rounded-xl p-8">
-                            <Icon icon={item.icon} className="size-10 text-blue-500" />
-                            <h3 className="text-xl mt-auto">
+                            name: 'Inisiasi',
+                            desc: 'Peluncuran tanpa drama. Kami menangani deployment, keamanan, dan serah terima aset sepenuhnya.'
+                        },].map((item, i) => <div key={i} className="bg-white dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800 h-64 flex flex-col rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300">
+                            <Icon icon={item.icon} className="size-12 text-blue-600 mb-6" />
+                            <h3 className="text-xl font-semibold mt-auto mb-2">
                                 {item.name}
                             </h3>
-                            <p className="text-sm text-neutral-500">
+                            <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed text-pretty">
                                 {item.desc}
                             </p>
                         </div>)}
                 </div>
             </section>
-            <section className="pt-20 md:pt-40 pb-20 max-sm:px-5 font-medium relative">
-                <div className="max-w-5xl mx-auto">
-                    <span className="border text-sm py-1 px-3 border-neutral-300 rounded-2xl">Ada Pertanyaan? Kami Punya Jawaban</span>
-                    <h1 className="md:text-4xl md:leading-12 text-2xl my-2">
-                        Pertanyaan yang Sering Diajukan<br /><span className="text-neutral-400">Semua yang perlu Anda ketahui tentang cara kami bekerja, jadwal, dan apa yang diharapkan.</span>
+            <section className="pt-20 md:pt-32 pb-20 max-sm:px-5 font-medium relative">
+                <div className="max-w-6xl mx-auto">
+                    <span className="border text-xs font-semibold tracking-wider uppercase py-1.5 px-4 border-neutral-200 dark:border-neutral-800 rounded-full text-neutral-500">FAQ</span>
+                    <h1 className="md:text-4xl md:leading-tight text-2xl my-4 font-medium tracking-tight">
+                        Pertanyaan Umum.<br /><span className="text-neutral-500 font-normal">Jawaban jujur untuk pertanyaan kritis Anda.</span>
                     </h1>
                 </div>
                 <Accordion
                     type="single"
                     collapsible
-                    className="max-w-6xl mx-auto rounded-2xl mt-10 grid md:grid-cols-2 gap-5 text-left">
+                    className="max-w-7xl mx-auto rounded-2xl mt-12 grid md:grid-cols-2 gap-6 text-left">
                     {FAQs.map((item) => (
                         <div
                             className="group"
                             key={item.question}>
                             <AccordionItem
                                 value={item.question}
-                                className="bg-white peer rounded-xl border-none px-7 py-1">
-                                <AccordionTrigger className="cursor-pointer hover:no-underline">{item.question}</AccordionTrigger>
-                                <AccordionContent>
+                                className="bg-white dark:bg-neutral-900 peer rounded-2xl border border-neutral-100 dark:border-neutral-800 px-6 py-2 shadow-sm">
+                                <AccordionTrigger className="cursor-pointer hover:no-underline text-lg font-medium">{item.question}</AccordionTrigger>
+                                <AccordionContent className="text-neutral-500 dark:text-neutral-400 leading-relaxed">
                                     <p>{item.answer}</p>
                                 </AccordionContent>
                             </AccordionItem>
-                            <hr className="mx-7 border-dashed group-last:hidden peer-data-[state=open]:opacity-0" />
                         </div>
                     ))}
                 </Accordion>

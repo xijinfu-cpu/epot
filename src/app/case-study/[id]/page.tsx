@@ -1,9 +1,7 @@
 import Stories from "@/data/client-stories.json"
 import { Icon } from "@iconify/react/dist/iconify.js";
-import Image from "next/image";
 import { ArrowUpRight, Quote } from "lucide-react";
 import { Safari } from "@/components/magicui/safari";
-import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { Compare } from "@/components/ui/compare";
 import Card from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -20,8 +18,8 @@ export const generateMetadata: any = async ({ params }: { params: CaseStudyParam
     const currentStory = Stories.find((v) => v.id === Number(params.id));
     return {
         title: currentStory
-            ? `${currentStory.title} | Client Story — Effortless`
-            : "Client Story — Effortless",
+            ? `${currentStory.title} | Client Story | Effortless`
+            : "Client Story | Effortless",
     } as Metadata;
 };
 
@@ -35,7 +33,7 @@ export default async function Page({
     return (<>
         <section className="pt-25 pb-20">
             <div className="max-w-7xl mt-10 mx-auto grid gap-5 grid-cols-7">
-                <div className="col-span-2">
+                <div className="col-span-2 pl-3 md:pl-6">
                     <div className="max-w-sm font-medium mb-10 mr-auto">
                         <span className="border text-sm py-1 px-3 border-neutral-300 rounded-2xl">{currentStory?.company}</span>
                         <h1 className="text-2xl md:text-3xl md:leading-10 mt-2">
@@ -69,11 +67,13 @@ export default async function Page({
                 </div>
                 <div className="col-span-5">
                     {currentStory?.hero && <div className="bg-white mb-10 rounded-xl p-1">
-                        <div className="bg-background rounded-xl flex p-10 items-center justify-center h-100">
-                            <Safari url={currentStory.domain}
-                                className="size-full"
+                        <div className="bg-background rounded-xl overflow-hidden aspect-[16/10]">
+                            <Safari
+                                url={currentStory.domain}
+                                className="w-full h-full"
                                 mode="simple"
-                                imageSrc={currentStory?.hero} />
+                                imageSrc={currentStory?.hero}
+                            />
                         </div>
                     </div>}
                     <div className="max-w-2xl mx-auto">
@@ -98,30 +98,21 @@ export default async function Page({
                         <h3 className="text-xl leading-8 font-bold mt-3">{currentStory?.solution.summary}</h3>
                         <p className="text-lg font-medium leading-7 mt-8">{currentStory?.solution.narrative}</p>
                     </div>
-                    {currentStory?.wireframes && <div className="bg-white relative first:col-span-2 mt-10 rounded-xl p-1">
-                        <div className="bg-background rounded-xl flex py-10 items-center justify-center h-100">
-                            <InfiniteSlider speed={25} gap={40} speedOnHover={10}>
-                                {currentStory.wireframes.map((wr, i) => <Image key={i} src={wr} width={400} height={400} alt={`wr-${i}`} className="border border-neutral-200 rounded-xl" />)}
-                            </InfiniteSlider>
-                        </div>
-                        <h1 className={`text-xs bg-black text-white w-fit px-3 py-1.5 rounded-2xl absolute bottom-5 right-5 font-medium`}>
-                            Early Wireframes
-                        </h1>
-                    </div>}
+                    {currentStory?.wireframes && null}
                     {currentStory?.compare && <div className="bg-white relative first:col-span-2 mt-10 rounded-xl p-1">
-                        <div className="bg-background rounded-xl flex p-10 items-center justify-center h-100">
+                        <div className="bg-background rounded-xl overflow-hidden aspect-[16/10]">
                             <Compare
                                 firstImage={currentStory?.compare[0]}
                                 secondImage={currentStory?.compare[1]}
-                                firstImageClassName="rounded-xl object-contain"
-                                secondImageClassname="rounded-xl object-contain"
-                                className="-full"
+                                firstImageClassName="rounded-xl object-cover"
+                                secondImageClassname="rounded-xl object-cover"
+                                className="w-full h-full"
                                 slideMode="hover"
                                 showHandlebar={false}
                                 autoplay={true}
                             />
                         </div>
-                        <h1 className={`text-xs bg-black text-white w-fit px-3 py-1.5 rounded-2xl absolute bottom-5 right-5 font-medium z-50`}>
+                        <h1 className="text-xs bg-black text-white w-fit px-3 py-1.5 rounded-2xl absolute bottom-5 right-5 font-medium z-50">
                             Wireframe to Product
                         </h1>
                     </div>}
@@ -146,7 +137,7 @@ export default async function Page({
                                     <Icon icon={"iconoir:peace-hand"} />
                                 </span>
                                 <h5 className="mt-auto">
-                                    A thank you note — for being such a awesome client
+                                    A thank you note for being such an awesome client
                                 </h5>
                             </div>
                         </div>}

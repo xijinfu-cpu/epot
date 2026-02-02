@@ -39,26 +39,20 @@ const Industries: FunctionComponent<IndustriesProps> = ({ className }) => {
         className: 'md:col-span-2'
     },]
     return (<>
-        <section className={cn("w-full py-20", className)}>
-            <div className="max-w-5xl mx-5 md:mx-auto font-medium">
-                <span className="border text-sm py-1 px-3 border-neutral-300 rounded-2xl">Industri</span>
-                <h1 className="md:text-4xl md:leading-12 text-2xl my-2">
-                    Segmen yang Kami Layani, <br /><span className="text-neutral-400">Untuk Brand yang Bergerak Cepat — dan Berpikir ke Depan</span>
+        <section className={cn("w-full py-20 px-5", className)}>
+            <div className="max-w-6xl mx-auto font-medium">
+                <span className="border text-xs font-semibold tracking-wider uppercase py-1.5 px-4 border-neutral-200 dark:border-neutral-800 rounded-full text-neutral-500">Fokus Industri</span>
+                <h1 className="md:text-4xl md:leading-tight text-2xl my-4 font-medium tracking-tight">
+                    Sektor Industri.<br /><span className="text-neutral-500 font-normal">Keahlian mendalam untuk tantangan spesifik industri Anda.</span>
                 </h1>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-5 mt-10 max-w-6xl mx-5 md:mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12 max-w-6xl mx-auto">
                 {
-                    industries.map((clientStory, i) => <div key={i} className={cn(`flex flex-col justify-end p-8 rounded-xl md:min-h-96 font-medium bg-no-repeat bg-center bg-cover bg-white relative duration-300 group`, clientStory.className)} style={(clientStory.image && { backgroundImage: `url('${clientStory.image}')` }) as React.CSSProperties}>
-                        <h1 className={`text-sm ${clientStory.invert ? 'bg-black text-white' : 'bg-white text-black'} w-fit px-3 py-1.5 rounded-2xl font-medium`}>
+                    industries.map((clientStory, i) => <div key={i} className={cn(`flex flex-col justify-end p-8 rounded-2xl md:min-h-80 font-medium bg-no-repeat bg-center bg-cover bg-neutral-100 dark:bg-neutral-900 relative duration-500 group overflow-hidden shadow-sm hover:shadow-xl`, clientStory.className)} style={(clientStory.image && { backgroundImage: `url('${clientStory.image}')` }) as React.CSSProperties}>
+                        <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500" />
+                        <h1 className={`text-sm ${clientStory.invert ? 'bg-black/90 text-white backdrop-blur-md' : 'bg-white/90 text-black backdrop-blur-md'} w-fit px-4 py-2 rounded-full font-semibold relative z-10 shadow-sm`}>
                             {clientStory.title}
                         </h1>
-                        {/* <div className="bg-transparent backdrop-blur-md rounded-xl flex flex-col items-center justify-center absolute top-0 left-0 w-full h-full invisible group-hover:visible opacity-0 group-hover:opacity-100 duration-300">
-                            <Button asChild className="text-sm text-primary" variant={"outline"}>
-                                <Link href={clientStory.link}>
-                                    Learn more <MoveRight strokeWidth={1.5} />
-                                </Link>
-                            </Button>
-                        </div> */}
                     </div>)
                 }
             </div>

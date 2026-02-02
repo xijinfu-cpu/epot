@@ -7,22 +7,22 @@ interface AboutProps {
 
 const About: FunctionComponent<AboutProps> = ({ className }) => {
     return (<>
-        <section className={cn("py-20 mx-5", className)}>
-            <div className="max-w-5xl mx-auto mb-5 font-medium">
-                <span className="border text-sm py-1 px-3 border-neutral-300 rounded-2xl">Tentang Kami</span>
+        <section className={cn("py-24 md:py-32 mx-5", className)}>
+            <div className="max-w-6xl mx-auto mb-10 md:mb-16 font-medium">
+                <span className="border text-xs font-semibold tracking-wider uppercase py-1.5 px-4 border-neutral-200 dark:border-neutral-800 rounded-full text-neutral-500">Tentang Kami</span>
             </div>
-            <div className="grid grid-cols-1 max-w-5xl mx-auto md:grid-cols-2 gap-8 md:gap-5">
+            <div className="grid grid-cols-1 max-w-6xl mx-auto md:grid-cols-2 gap-10 md:gap-16">
                 <div>
-                    <h2 className="md:text-2xl">
-                        Effortless berdiri dengan satu tujuan:
-                        <span className="text-neutral-400"> membuat kehadiran digital menjadi sederhana dan berdampak. Kami percaya bahwa website yang baik bukan hanya soal estetika, tetapi juga tentang kecepatan, kemudahan penggunaan, dan kemampuan untuk membangun kepercayaan sejak kunjungan pertama.</span>
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl leading-tight font-medium tracking-tight">
+                        Effortless hadir dengan satu visi fundamental:
+                        <span className="text-neutral-400 dark:text-neutral-500"> menyederhanakan kompleksitas digital. Kami percaya bahwa website luar biasa adalah sinergi antara estetika memukau, performa tinggi, dan navigasi intuitif yang membangun kredibilitas instan.</span>
                     </h2>
                 </div>
-                <div>
-                    <h2 className="md:text-2xl">
-                        Sebagai PT Effortless Digital Agency,
-                        <span className="text-neutral-400"> tim kami menggabungkan keahlian desain, pengembangan, dan strategi digital untuk menghadirkan solusi yang sesuai dengan kebutuhan unik setiap klien. Kami tidak hanya membangun website—kami menciptakan aset digital yang memperkuat identitas bisnis Anda dan mendorong pertumbuhan jangka panjang.</span>
-                    </h2>
+                <div className="md:pt-2">
+                    <p className="text-lg md:text-xl leading-relaxed text-neutral-800 dark:text-neutral-200">
+                        Sebagai <span className="font-semibold text-black dark:text-white">PT Effortless Digital Agency</span>,
+                        <span className="text-neutral-500 dark:text-neutral-400"> kami meleburkan strategi bisnis dengan eksekusi teknis yang presisi. Kami tidak sekadar membangun website—kami menciptakan aset digital bernilai tinggi yang memperkuat identitas merek Anda, memperluas jangkauan pasar, dan mendorong pertumbuhan bisnis yang berkelanjutan.</span>
+                    </p>
                 </div>
             </div>
         </section>

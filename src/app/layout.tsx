@@ -3,7 +3,7 @@ import { Geist, Geist_Mono, } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/custom/footer";
 import Header from "@/components/custom/header";
-import ChatBot from "@/components/custom/chatbot";
+import ScrollToTop from "@/components/custom/scroll-to-top";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -160,7 +160,8 @@ export default function RootLayout({
         <main className="w-full">
           {children}
           <Footer />
-          <ChatBot />
+          <ScrollToTop />
+
         </main>
       </body>
     </html>

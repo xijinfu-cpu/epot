@@ -1,54 +1,52 @@
 [
     {
         "id": 1,
-        "title": "Aurora Boutique: Fashion Lokal yang Tampil Premium",
+        "title": "Bachman Decor - Website Wedding Organizer",
         "className": "text-white drop-shadow-md",
-        "slug": "aurora-boutique-fashion-lokal",
+        "slug": "bachman-decor-wedding-organizer",
         "featured": true,
         "isNDA": false,
         "status": "live",
-        "clientName": "Rafi Ananda",
-        "clientRole": "Pendiri & Creative Director",
-        "company": "Aurora Boutique",
-        "industry": "E-commerce Fashion",
-        "projectType": "Desain & Pengembangan Website",
-        "duration": "6 minggu",
+        "clientName": "Bachman Decor",
+        "clientRole": "Wedding Organizer",
+        "company": "Bachman Decor",
+        "industry": "Wedding Organizer",
+        "projectType": "UI UX Designer & Framer Dev",
+        "role": "UI UX Designer & Framer Dev",
+        "year": "2025",
+        "duration": "4 Hari",
         "challenge": {
-            "summary": "Website lama lambat, tidak bisa mengangkat cerita koleksi, dan hanya mengulang katalog marketplace.",
-            "narrative": "Aurora Boutique tumbuh besar lewat pop-up dan marketplace, tetapi setiap kali kampanye baru, tim harus membuat landing page manual yang tidak konsisten. CMS lama tidak fleksibel, gambar pecah, dan checkout sering putus jika trafik meningkat. Rafi ingin rumah digital yang terasa seperti butik offline mereka: intim, rapi, dan siap menerima transaksi 24/7."
+            "summary": "Membangun etalase digital premium untuk jasa venue, dekorasi, dan catering pernikahan.",
+            "narrative": "Bachman Decor membutuhkan website yang berfungsi sebagai storefront lengkap: menampilkan paket dekorasi, inspirasi visual, detail harga, serta informasi penting bagi pasangan yang merencanakan pernikahan. Semua harus terasa elegan, mudah dinavigasi, dan siap pakai sebagai alat konsultasi."
         },
         "solution": {
-            "summary": "Kami membangun platform e-commerce dengan storytelling yang kuat dan performa setara aplikasi native.",
-            "narrative": "Kami memulai dengan audit brand, menulis ulang narasi koleksi, lalu membangun design system modular di Figma. Dari sana kami merakit front-end Next.js + Tailwind CSS, tersambung ke Shopify Storefront API dan Contentful sehingga tim marketing bisa mempublikasikan kampanye cukup lewat blok konten. Seluruh aset visual kami optimalkan dengan Cloudinary dan caching Vercel Edge agar halaman penuh video tetap ringan."
+            "summary": "Desain UI/UX dan pengembangan Framer yang menyatu dengan identitas premium Bachman Decor.",
+            "narrative": "Kami merancang alur dari katalog hingga formulir konsultasi, menyiapkan komponen harga, inspirasi dekorasi, dan CTA yang jelas. Website dibangun di Framer agar tim dapat memperbarui konten tanpa developer, sekaligus menjaga transisi halus dan tipografi elegan."
         },
         "result": {
-            "summary": "Koleksi pertama yang dirilis di situs baru langsung melampaui target prapenjualan.",
-            "narrative": "Begitu website baru tayang, Aurora tidak lagi membagi fokus antara marketplace dan situs. Mereka punya satu etalase utama yang memuat cerita, lookbook, serta checkout yang lancar. Tim offline kini tinggal menggunakan template kampanye untuk meluncurkan koleksi musiman dan bundel kolaborasi.",
+            "summary": "Situs siap tayang sebagai etalase premium dan panduan lengkap calon pengantin.",
+            "narrative": "Website menampilkan paket dekorasi, galeri inspirasi, dan informasi venue dalam satu alur ringkas. Pengunjung dapat memahami penawaran, membandingkan paket, lalu menghubungi tim tanpa hambatan. ",
             "metrics": [
-                "38% kenaikan rasio konversi dalam 30 hari pertama",
-                "CMS multi-blok memungkinkan tim membuat 5 landing page baru tanpa bantuan developer",
-                "Waktu muat halaman utama konsisten di 1,2 detik untuk pengunjung Asia",
-                "Integrasi WhatsApp Sales untuk koleksi eksklusif menaikkan AOV sebesar 22%"
+                "Alur paket, inspirasi, dan kontak tersaji dalam satu lintasan scroll",
+                "Komponen harga dan CTA disiapkan untuk eksperimen cepat di Framer",
+                "Konsisten dengan identitas premium Bachman Decor di seluruh halaman"
             ]
         },
-        "quote": "Dengan Effortless, visual, copy, dan checkout akhirnya seirama. Kami bisa fokus di koleksi, bukan di memperbaiki plugin.",
-        "clientVoice": "Tim Effortless memimpin sprint harian seperti in-house team. Mereka menunjukan preview tiap malam sehingga kami selalu tahu apa yang siap diuji di pagi hari.",
+        "quote": "Website ini langsung terasa seperti showroom digital Bachman Decor: elegan, informatif, dan siap dipakai konsultasi.",
+        "clientVoice": "Effortless menangani desain hingga Framer build. Setiap elemen dibuat fleksibel sehingga tim kami bisa update paket dan galeri tanpa menunggu developer.",
         "techStack": [
-            "Next.js",
-            "Tailwind CSS",
-            "Shopify Storefront API",
-            "Contentful",
-            "Cloudinary",
-            "Vercel Functions"
+            "Figma",
+            "Framer",
+            "React"
         ],
         "tags": [
-            "E-Commerce",
-            "Design System",
-            "Headless",
-            "Performance"
+            "Wedding Organizer",
+            "Marketing Site",
+            "UI/UX",
+            "Framer"
         ],
-        "image": "/story-fashion-collage.png",
-        "theme": "Dari Rak Offline ke Etalase Digital",
+        "image": "/MM3OuBI0GZfqFEs4MtKhTEbZU.avif",
+        "theme": "Showroom Digital untuk Calon Pengantin",
         "wireframes": [
             "/story-designing.png",
             "/story-development.png"
@@ -57,71 +55,69 @@
             "/story-branding.png",
             "/story-apps.png"
         ],
-        "hero": "/story-fashion-collage.png",
-        "domain": "aurorabutik.id",
-        "website": "https://aurorabutik.id"
+        "hero": "/story-branding.png",
+        "domain": "bachmandecor.com",
+        "website": "https://bachmandecor.com/"
     },
     {
         "id": 2,
-        "title": "Kulina Coffee Lab: Portal Subscription yang Hangat",
+        "title": "Solatagro - Agriculture Website",
         "className": "text-white",
-        "slug": "kulina-coffee-lab-subscription",
+        "slug": "solatagro-agriculture-website",
         "featured": true,
         "isNDA": false,
-        "status": "on-going",
-        "clientName": "Nayla Wibisono",
-        "clientRole": "Chief Marketing Officer",
-        "company": "Kulina Coffee Lab",
-        "industry": "F&B Subscription",
-        "projectType": "Website & Sistem Member",
-        "duration": "5 minggu (ongoing)",
+        "status": "live",
+        "clientName": "Tim Solatagro",
+        "clientRole": "Marketing & Operations",
+        "company": "Solatagro",
+        "industry": "Agriculture",
+        "projectType": "UI UX Designer & Wordpress Dev",
+        "duration": "4 minggu (live 7 Nov 2025)",
         "challenge": {
-            "summary": "Form pendaftaran manual dan microsite terpisah membuat pelanggan bingung memilih paket member.",
-            "narrative": "Kulina Coffee Lab baru saja meracik program langganan kopi mingguan, tetapi pengalaman digitalnya tersebar di berbagai tool: Notion, Google Form, dan WhatsApp. Data pelanggan tidak sinkron, onboarding lambat, dan brand story yang hangat tidak tersampaikan di website lama. Nayla membutuhkan portal tunggal yang memandu calon anggota memilih paket, menjelaskan cerita petani, dan langsung memproses pembayaran."
+            "summary": "Konten edukasi dan katalog produk pertanian tersebar sehingga sulit diakses lewat situs lama.",
+            "narrative": "Solatagro ingin portal agrikultur yang menjadi pusat edukasi, katalog produk, dan hub komunitas petani. Situs WordPress sebelumnya lambat, struktur konten tidak seragam, dan tim lapangan mengandalkan spreadsheet untuk memperbarui varietas benih serta jadwal panen. Mereka butuh CMS yang mudah diisi via CSV dengan panduan impor yang jelas agar data tidak rusak."
         },
         "solution": {
-            "summary": "Kami menghadirkan portal membership dengan builder kampanye terintegrasi automasi komunikasi.",
-            "narrative": "Kami memetakan ulang perjalanan pelanggan, lalu membuat komponen kampanye reusable sehingga tim marketing bisa menyusun halaman baru cukup dengan drag-and-drop blok konten. Back-end Supabase menyimpan preferensi rasa, sementara Stripe menangani pembayaran berulang. Semua email sambutan dan reminder dikirimkan otomatis melalui Resend, lengkap dengan personalisasi cerita kopi dari kebun mitra."
+            "summary": "Desain ulang UI/UX dan WordPress dengan modul impor CSV lengkap dengan checklist.",
+            "narrative": "Kami membangun identitas baru bertema \"Purple Flower\" agar Solatagro tampil modern namun tetap agraris, lalu merancang layout responsif untuk desktop dan mobile. Di balik layar, kami siapkan alur impor CSV: file harus diekspor sebagai CSV ber-encoding UTF-8 (<5MB), kolom dicocokkan dengan field CMS, slug unik, serta rich text memakai HTML. Gambar diambil otomatis dari URL, field warna menerima hex/rgb/hsla, dan field tanggal mengikuti format ISO8601. Semua instruksi diringkas di dashboard WordPress supaya tim non-teknis bisa memperbarui katalog tanpa developer."
         },
         "result": {
-            "summary": "Soft launch portal berhasil menutup slot Founder Plan hanya dalam dua minggu.",
-            "narrative": "Calon pelanggan kini mendapat pengalaman yang konsisten: memilih paket, melihat jadwal roasting, hingga melacak pengiriman di satu tempat. Tim Kulina tinggal mengubah hero copy dan ilustrasi untuk kampanye musiman tanpa menunggu sprint developer.",
+            "summary": "Portal Solatagro siap tayang dengan alur impor konten yang aman dan konsisten.",
+            "narrative": "Tim marketing kini bisa menarik data lapangan langsung ke WordPress, memvalidasi field, lalu memublikasikan artikel, produk, dan cerita petani dalam sekali unggah. Pengunjung mendapatkan halaman cepat dengan alur jelas dari hero hingga CTA konsultasi, sementara admin dapat undo/redo impor jika ada kesalahan.",
             "metrics": [
-                "3 alur membership otomatis untuk trial, langganan, dan gift set",
-                "70% pendaftar baru menyelesaikan pembayaran dalam satu sesi",
-                "Email sambutan otomatis mengirim 1,2K voucher tanpa intervensi manual",
-                "Integrasi pembayaran selesai 2x lebih cepat berkat komponen checkout reusable"
+                "Checklist impor CSV memangkas upload katalog mingguan dari 2 jam menjadi 25 menit",
+                "40+ halaman WordPress berbagi komponen desain baru tanpa duplikasi",
+                "SEO dasar (slug, meta, schema artikel) terisi otomatis saat impor",
+                "Dokumentasi impor bilingual disimpan di dashboard untuk onboarding tim baru"
             ]
         },
-        "quote": "Platform membership kami akhirnya terasa hangat seperti kedai fisik. Semua informasi tersaji runtut dan penjualan jadi jauh lebih mudah.",
-        "clientVoice": "Effortless menjaga ritme komunikasi harian. Mereka berbagi progress video singkat setiap malam sehingga tim kami bisa memberi feedback sebelum sprint berikutnya dimulai.",
+        "quote": "Platform baru terasa ringan dan rapi; tim lapangan tinggal unggah CSV dan katalog langsung terbit.",
+        "clientVoice": "Effortless membantu kami merapikan struktur konten sekaligus membuat SOP impor yang mudah diikuti. Setiap iterasi UI langsung disesuaikan agar cocok dengan flow WordPress.",
         "techStack": [
-            "Next.js",
-            "Tailwind CSS",
-            "Supabase",
-            "Stripe",
-            "Resend",
-            "Vercel"
+            "Figma",
+            "WordPress",
+            "ACF",
+            "GSAP"
         ],
         "tags": [
-            "Subscription",
-            "CRM",
-            "Automation",
-            "CMS"
+            "Agriculture",
+            "Corporate Site",
+            "CMS",
+            "WordPress"
         ],
-        "image": "/story-botanical.png",
-        "theme": "Meracik Loyalitas Pelanggan",
+        "image": "/IMG_0969-e1758990419931.jpeg",
+        "theme": "Portal Agrikultur Serbaguna",
         "wireframes": [
             "/story-auditing.png",
             "/story-apps.png"
         ],
         "compare": [
-            "/story-bios.png",
-            "/story-data-flow.png"
+            "/1768833790612-picsay.jpg",
+            "/herokl.jpeg"
         ],
-        "hero": "/story-botanical.png",
-        "domain": "kulinalab.com",
-        "website": "https://kulinalab.com"
+        "hero": "/herokl.jpeg",
+        "domain": "solatagro.com",
+        "website": "https://solatagro.com/"
     },
     {
         "id": 3,
@@ -188,65 +184,69 @@
     },
     {
         "id": 4,
-        "title": "Pelita Health: Klinik Digital yang Ramah Pasien",
+        "title": "Writeen - Website E-Learning",
         "className": "text-white",
-        "slug": "pelita-health-digital-clinic",
+        "slug": "writeen-website-e-learning",
         "featured": false,
         "isNDA": false,
         "status": "delivered",
-        "clientName": "Dr. Citra Pelita",
-        "clientRole": "Co-founder",
-        "company": "Pelita Health",
-        "industry": "Kesehatan",
-        "projectType": "Website Layanan & Booking",
-        "duration": "4 minggu",
+        "clientName": "Safira Az zahra",
+        "clientRole": "CEO & Founder",
+        "company": "Writeen",
+        "industry": "Edutech",
+        "projectType": "Revamp E-Learning & Gamification",
+        "duration": "1 minggu",
+        "role": "UI UX Designer",
+        "year": "2025",
         "challenge": {
-            "summary": "Pasien harus menelepon untuk mendaftar sementara jadwal dokter tersebar di spreadsheet internal.",
-            "narrative": "Pelita Health mengelola tiga cabang klinik gigi dan kulit. Mereka pernah membuat website, tetapi hanya berisi poster statis sehingga pasien tetap menghubungi call center untuk booking. Tim ingin menghadirkan pengalaman digital yang hangat, transparan soal harga, dan langsung memblok slot dokter yang tersedia."
+            "summary": "Alur kuis, kursus, dan artikel berlapis tanpa filter jelas membuat pengguna cepat bingung.",
+            "narrative": "Writeen adalah platform edutech literasi dengan fitur e-learning, gamifikasi kuis, dan artikel. Sebelum revamp, akses kuis butuh banyak langkah, tombol \"Mulai Bermain\" memicu kuis acak, dan komponen UI antar kategori tidak seragam. Halaman Explore Courses kekurangan filter level/gratis-premium, sedangkan laman Artikel padat namun minim social proof seperti profil penulis dan tanggal terbit."
         },
         "solution": {
-            "summary": "Kami menyusun website patient-first lengkap dengan sistem booking real-time dan edukasi layanan.",
-            "narrative": "Kami mengerjakan sesi brand writing bersama dokter untuk menampilkan cerita perawatan, lalu merancang komponen UI yang memandu pasien memilih layanan berdasarkan masalah. Integrasi Directus CMS membuat tim admin bisa memperbarui paket promo. Booking engine kami bangun di atas Supabase dan Midtrans agar pembayaran DP otomatis tercatat, sementara notifikasi dikirim lewat email dan WhatsApp template."
+            "summary": "Kami mendesain ulang alur dan UI agar setiap konten mudah ditemukan, konsisten, dan terasa modern.",
+            "narrative": "Kami memulai dengan evaluasi heuristik untuk memetakan titik friksi, lalu menyederhanakan alur akses kuis, kursus, dan artikel. Pengantar level, daftar kategori, filter kesulitan, dan leaderboard kini berada di satu halaman; leaderboard dipisah ke halaman sendiri agar tidak mengganggu fokus. Explore Courses direka ulang dengan pencarian menonjol serta filter level dan status gratis/premium, sementara pendaftaran kursus premium dipertegas dengan cue visual. Halaman Artikel mendapat profil penulis bergambar, tanggal rilis, ringkasan singkat, dan estimasi waktu baca. Kami juga merapikan tipografi, warna, spasi, serta IA di homepage, pricing, dan About Us untuk menjaga konsistensi."
         },
         "result": {
-            "summary": "Pasien bisa menyelesaikan booking kurang dari dua menit tanpa menghubungi call center.",
-            "narrative": "Website baru memperlihatkan jadwal dokter, testimoni, serta FAQ yang paling sering ditanyakan. Cabang kini bisa mengatur kapasitas masing-masing dan melihat laporan harian langsung dari dashboard admin.",
+            "summary": "Pengalaman baru membuat pengguna berpindah fitur tanpa tersesat dan lebih mau menyelesaikan konten.",
+            "narrative": "Prototipe interaktif Figma kami uji di desktop dan mobile. Modal keluar kuis diubah agar mendorong penyelesaian, dan tombol lanjut hanya aktif setelah semua pertanyaan terjawab. Siklus umpan balik cepat dengan stakeholder menjaga fidelity desain-ke-dev. Hasilnya, alur akses kuis, kursus, dan artikel lebih pendek, tampilan konsisten, dan kredibilitas meningkat berkat social proof yang jelas.",
             "metrics": [
-                "82% booking baru terjadi langsung melalui website",
-                "Waktu admin mengonfirmasi jadwal turun dari 15 menit menjadi 3 menit",
-                "15 paket edukasi perawatan diterbitkan lewat CMS tanpa bantuan developer",
-                "Integrasi Midtrans mengurangi no-show sebesar 27% berkat DP otomatis"
+                "Alur ke halaman kuis dipadatkan menjadi satu langkah dari beranda",
+                "Filter kategori dan tingkat kesulitan membuat pemilihan kuis lebih terarah",
+                "Halaman Artikel menampilkan ringkasan, waktu baca, serta profil penulis untuk meningkatkan kepercayaan",
+                "Versi mobile dan desktop diuji lewat prototipe interaktif sebelum handoff"
             ]
         },
-        "quote": "Pasien merasa diarahkan seperti saat datang langsung, dan kami tidak lagi kewalahan dengan telepon berulang.",
-        "clientVoice": "Effortless membantu tim kami yang bukan teknisi untuk berani mengubah konten sendiri. Mereka bahkan merekam tutorial singkat setiap kali fitur baru dirilis.",
+        "quote": "Revamp ini membuat konten kami terasa terkurasi; pengguna tahu harus mulai dari mana tanpa harus ditelepon CS.",
+        "clientVoice": "Effortless memimpin riset, iterasi wireframe, hingga prototipe interaktif yang langsung bisa diuji tim kami. Mereka kolaboratif dan memastikan setiap keputusan desain punya alasan kuat.",
         "techStack": [
+            "Figma",
             "Next.js",
             "Tailwind CSS",
-            "Directus",
             "Supabase",
-            "Midtrans",
-            "Google Cloud Run"
+            "Stripe",
+            "Resend"
         ],
         "tags": [
-            "Healthcare",
-            "Booking",
-            "CMS",
-            "Automation"
+            "Edutech",
+            "E-Learning",
+            "Gamification",
+            "Design System"
         ],
-        "image": "/story-art-gallery.png",
-        "theme": "Pelayanan Hangat Tanpa Antrian",
+        "image": "/art-2578353_1920.jpg",
+        "theme": "Literasi Interaktif untuk Semua Level",
         "wireframes": [
-            "/story-art.png",
-            "/story-hands.png"
+            "/1767458616186.jpg",
+            "/1767458641768.jpg",
+            "/1767458782067.jpg",
+            "/1767458368015.jpg"
         ],
         "compare": [
-            "/story-auditing.png",
-            "/story-designing.png"
+            "/story-art-gallery.png",
+            "/1767459061341.jpg"
         ],
         "hero": "/story-art-gallery.png",
-        "domain": "pelitahealth.co",
-        "website": "https://pelitahealth.co"
+        "domain": "writeen.id",
+        "website": "https://writeen.id"
     }
 ]
 
