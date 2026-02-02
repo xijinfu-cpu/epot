@@ -1,5 +1,4 @@
-import { ArrowLeft, FileText, ShieldCheck } from "lucide-react";
-import Link from "next/link";
+import { FileText, ShieldCheck } from "lucide-react";
 import { FunctionComponent } from "react";
 
 const ContractPage: FunctionComponent = () => {

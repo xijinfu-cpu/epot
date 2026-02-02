@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { FunctionComponent, useEffect, useRef, useState } from "react";
 import { Button } from "../ui/button";
 import { ArrowUpRight, Menu, MoveRight, X } from "lucide-react";
-import { HyperText } from "../magicui/hyper-text";
+
 
 interface HeaderProps {
     className?: string

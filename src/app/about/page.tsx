@@ -1,7 +1,7 @@
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { MoveRight } from "lucide-react";
 import { Metadata } from "next";
-import Image from "next/image";
+
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -33,7 +33,7 @@ export default function About() {
                 <div className="grid max-w-7xl mx-5 md:mx-auto grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 relative z-10">
                     <div className="bg-white dark:bg-neutral-900 rounded-2xl min-h-80 md:min-h-[30rem] flex flex-col font-medium p-2 shadow-sm border border-neutral-100 dark:border-neutral-800">
                         <div className="h-64 sm:h-72 md:h-80 flex items-center justify-center duration-300 overflow-hidden rounded-xl bg-neutral-50 dark:bg-neutral-800 p-8 sm:p-12">
-                            <h3 className="text-lg sm:text-xl md:text-2xl text-center leading-relaxed font-normal text-pretty">"Kejelasan di atas kompleksitas. Kecepatan di atas kesempurnaan yang tak kunjung rilis. Pengiriman adalah reputasi kami."</h3>
+                            <h3 className="text-lg sm:text-xl md:text-2xl text-center leading-relaxed font-normal text-pretty">&quot;Kejelasan di atas kompleksitas. Kecepatan di atas kesempurnaan yang tak kunjung rilis. Pengiriman adalah reputasi kami.&quot;</h3>
                         </div>
                         <h1 className="text-2xl sm:text-3xl md:text-3xl leading-tight mt-auto px-6 my-4 md:my-6 tracking-tight">
                             Misi Kami
